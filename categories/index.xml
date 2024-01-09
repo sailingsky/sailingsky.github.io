@@ -6,7 +6,15 @@
         <description>Recent content in Categories on 码文</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Wed, 22 Nov 2023 16:45:23 +0800</lastBuildDate><atom:link href="https://sailingsky.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 09 Jan 2024 21:14:46 +0800</lastBuildDate><atom:link href="https://sailingsky.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>sharding-jdbc</title>
+        <link>https://sailingsky.github.io/categories/sharding-jdbc/</link>
+        <pubDate>Tue, 09 Jan 2024 21:14:46 +0800</pubDate>
+        
+        <guid>https://sailingsky.github.io/categories/sharding-jdbc/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>spring cloud gateway</title>
         <link>https://sailingsky.github.io/categories/spring-cloud-gateway/</link>
         <pubDate>Wed, 22 Nov 2023 16:45:23 +0800</pubDate>
