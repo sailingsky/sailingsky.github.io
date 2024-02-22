@@ -6,7 +6,15 @@
         <description>Recent content in Categories on 码文</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Mon, 15 Jan 2024 18:46:18 +0800</lastBuildDate><atom:link href="https://sailingsky.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 22 Feb 2024 15:44:27 +0800</lastBuildDate><atom:link href="https://sailingsky.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AI</title>
+        <link>https://sailingsky.github.io/categories/ai/</link>
+        <pubDate>Thu, 22 Feb 2024 15:44:27 +0800</pubDate>
+        
+        <guid>https://sailingsky.github.io/categories/ai/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>prometheus</title>
         <link>https://sailingsky.github.io/categories/prometheus/</link>
         <pubDate>Mon, 15 Jan 2024 18:46:18 +0800</pubDate>
