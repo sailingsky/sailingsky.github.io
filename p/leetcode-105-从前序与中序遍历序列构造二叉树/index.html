@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='斐波那契数列定义： 引用自维基百科： 斐波那契数（意大利语：Successione di Fibonacci），又译为菲波拿契数、菲波那西数、斐氏数、'>
-<title>斐波那契数列解法</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='题目描述 给定两个整数数组 preorder 和 inorder ，其中 preorder 是二叉树的先序遍历， inorder 是同一棵树的中序遍历，请构造二叉树并返回其根节点。 示例 1: 1 2 输入: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7] 输'>
+<title>Leetcode-105 从前序与中序遍历序列构造二叉树</title>
 
-<link rel='canonical' href='https://sailingsky.github.io/p/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E8%A7%A3%E6%B3%95/'>
+<link rel='canonical' href='https://sailingsky.github.io/p/leetcode-105-%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/'>
 
-<link rel="stylesheet" href="/scss/style.min.67edaef6d5909a9a4846843b7837bc1710369b5d99de1286331701b69868ef7d.css"><meta property='og:title' content='斐波那契数列解法'>
-<meta property='og:description' content='斐波那契数列定义： 引用自维基百科： 斐波那契数（意大利语：Successione di Fibonacci），又译为菲波拿契数、菲波那西数、斐氏数、'>
-<meta property='og:url' content='https://sailingsky.github.io/p/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E8%A7%A3%E6%B3%95/'>
+<link rel="stylesheet" href="/scss/style.min.67edaef6d5909a9a4846843b7837bc1710369b5d99de1286331701b69868ef7d.css"><meta property='og:title' content='Leetcode-105 从前序与中序遍历序列构造二叉树'>
+<meta property='og:description' content='题目描述 给定两个整数数组 preorder 和 inorder ，其中 preorder 是二叉树的先序遍历， inorder 是同一棵树的中序遍历，请构造二叉树并返回其根节点。 示例 1: 1 2 输入: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7] 输'>
+<meta property='og:url' content='https://sailingsky.github.io/p/leetcode-105-%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/'>
 <meta property='og:site_name' content='码文'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='算法' /><meta property='article:tag' content='Fibonacci' /><meta property='article:published_time' content='2023-09-25T10:52:14&#43;08:00'/><meta property='article:modified_time' content='2023-09-25T10:52:14&#43;08:00'/><meta property='og:image' content='https://sailingsky.github.io/post/algorithm/pexels-google-deepmind-18069816.jpg' />
-<meta name="twitter:title" content="斐波那契数列解法">
-<meta name="twitter:description" content="斐波那契数列定义： 引用自维基百科： 斐波那契数（意大利语：Successione di Fibonacci），又译为菲波拿契数、菲波那西数、斐氏数、"><meta name="twitter:card" content="summary_large_image">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='算法' /><meta property='article:tag' content='leetcode' /><meta property='article:published_time' content='2024-03-11T21:25:08&#43;08:00'/><meta property='article:modified_time' content='2024-03-11T21:25:08&#43;08:00'/><meta property='og:image' content='https://sailingsky.github.io/post/algorithm/pexels-google-deepmind-18069816.jpg' />
+<meta name="twitter:title" content="Leetcode-105 从前序与中序遍历序列构造二叉树">
+<meta name="twitter:description" content="题目描述 给定两个整数数组 preorder 和 inorder ，其中 preorder 是二叉树的先序遍历， inorder 是同一棵树的中序遍历，请构造二叉树并返回其根节点。 示例 1: 1 2 输入: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7] 输"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://sailingsky.github.io/post/algorithm/pexels-google-deepmind-18069816.jpg' />
     <link rel="shortcut icon" href="/favicon.png" />
 
@@ -261,11 +261,14 @@ if (!doNotTrack) {
   <ol>
     <li>
       <ol>
-        <li><a href="#斐波那契数列定义">斐波那契数列定义：</a></li>
-        <li><a href="#递归解法1">递归解法1：</a></li>
-        <li><a href="#递归临时存储">递归临时存储：</a></li>
-        <li><a href="#动态规划解法">动态规划解法：</a></li>
-        <li><a href="#动态规划解法-优化">动态规划解法-优化：</a></li>
+        <li>
+          <ol>
+            <li><a href="#题目描述">题目描述</a></li>
+            <li><a href="#解题思路">解题思路</a></li>
+            <li><a href="#代码">代码</a></li>
+            <li><a href="#效果">效果：</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -282,9 +285,9 @@ if (!doNotTrack) {
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E8%A7%A3%E6%B3%95/">
+            <a href="/p/leetcode-105-%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/">
                 
-                    <img src="/post/algorithm/pexels-google-deepmind-18069816.jpg" loading="lazy" alt="Featured image of post 斐波那契数列解法" />
+                    <img src="/post/algorithm/pexels-google-deepmind-18069816.jpg" loading="lazy" alt="Featured image of post Leetcode-105 从前序与中序遍历序列构造二叉树" />
                 
             </a>
         </div>
@@ -303,7 +306,7 @@ if (!doNotTrack) {
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E8%A7%A3%E6%B3%95/">斐波那契数列解法</a>
+            <a href="/p/leetcode-105-%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/">Leetcode-105 从前序与中序遍历序列构造二叉树</a>
         </h2>
     
         
@@ -325,7 +328,7 @@ if (!doNotTrack) {
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2023/09/25</time>
+                <time class="article-time--published">2024/03/11</time>
             </div>
         
 
@@ -340,7 +343,7 @@ if (!doNotTrack) {
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 1 分钟
                 </time>
             </div>
         
@@ -355,129 +358,35 @@ if (!doNotTrack) {
     <section class="article-content">
     
     
-    <h3 id="斐波那契数列定义">斐波那契数列定义：</h3>
-<blockquote>
-<p>引用自维基百科：</p>
-</blockquote>
-<p><strong>斐波那契数</strong>（<a class="link" href="https://zh.wikipedia.org/wiki/%e6%84%8f%e5%a4%a7%e5%88%a9%e8%af%ad"  target="_blank" rel="noopener"
-    >意大利语</a>：Successione di Fibonacci），又译为<strong>菲波拿契数</strong>、<strong>菲波那西数</strong>、<strong>斐氏数</strong>、<strong>黄金分割数</strong>。所形成的<a class="link" href="https://zh.wikipedia.org/wiki/%e6%95%b0%e5%88%97"  target="_blank" rel="noopener"
-    >数列</a>称为<strong>斐波那契数列</strong>（<a class="link" href="https://zh.wikipedia.org/wiki/%e6%84%8f%e5%a4%a7%e5%88%a9%e8%af%ad"  target="_blank" rel="noopener"
-    >意大利语</a>：Successione di Fibonacci），又译为<strong>菲波拿契数列</strong>、<strong>菲波那西数列</strong>、<strong>斐氏数列</strong>、<strong>黄金分割数列</strong>。这个数列是由<a class="link" href="https://zh.wikipedia.org/wiki/%e6%84%8f%e5%a4%a7%e5%88%a9"  target="_blank" rel="noopener"
-    >意大利</a><a class="link" href="https://zh.wikipedia.org/wiki/%e6%95%b8%e5%ad%b8%e5%ae%b6"  target="_blank" rel="noopener"
-    >数学家</a><a class="link" href="https://zh.wikipedia.org/wiki/%e6%96%90%e6%b3%a2%e9%82%a3%e5%a5%91"  target="_blank" rel="noopener"
-    >斐波那契</a>在他的《算盘书》中提出。</p>
-<p>在<a class="link" href="https://zh.wikipedia.org/wiki/%e6%95%b8%e5%ad%b8"  target="_blank" rel="noopener"
-    >数学</a>上，<strong>斐波那契数</strong>是以<a class="link" href="https://zh.wikipedia.org/wiki/%e9%80%92%e5%bd%92"  target="_blank" rel="noopener"
-    >递归</a>的方法来定义：</p>
+    <h4 id="题目描述">题目描述</h4>
+<p>给定两个整数数组 <code>preorder</code> 和 <code>inorder</code> ，其中 <code>preorder</code> 是二叉树的<strong>先序遍历</strong>， <code>inorder</code> 是同一棵树的<strong>中序遍历</strong>，请构造二叉树并返回其根节点。</p>
+<p><strong>示例 1:</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/02/19/tree.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">输入: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
+</span></span><span class="line"><span class="cl">输出: [3,9,20,null,null,15,7]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="解题思路">解题思路</h4>
 <ul>
-<li><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/58ebe8b2d5551fb272cd4258940fe1e492592d02"
-	
-	
-	
-	loading="lazy"
-	
-		alt="F_{0}=0"
-	
-	
-></li>
-<li><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c374ba08c140de90c6cbb4c9b9fcd26e3f99ef56"
-	
-	
-	
-	loading="lazy"
-	
-		alt="F_{1}=1"
-	
-	
-></li>
-<li><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4fa6d281e7a54e08aeffeef7458ddc0884333686"
-	
-	
-	
-	loading="lazy"
-	
-		alt="F_{n}=F_{{n-1}}&#43;F_{{n-2}}"
-	
-	
->（<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/12e27a3b350c6e2b14091d449563b273d76070a9"
-	
-	
-	
-	loading="lazy"
-	
-		alt="{\displaystyle n\geqq 2}"
-	
-	
->)</li>
+<li>利用规则，前序数组规则是：根-左-右 ，中序数组规则是：左-根-右</li>
+<li>以前序数组为主，确定好左子树的长度（而左子树的长度，可以从中序数组中根左边数字长度获得），接着就能分别对左右子树进行递归构造。</li>
 </ul>
-<p>用文字来说，就是斐波那契数列由0和1开始，之后的斐波那契数就是由之前的两数相加而得出。</p>
-<h3 id="递归解法1">递归解法1：</h3>
-<p>根据其数学定义，采用递归方式，直译成代码：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">fib1</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">){</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="o">(</span><span class="n">n</span><span class="o">==</span><span class="n">0</span><span class="o">||</span><span class="n">n</span><span class="o">==</span><span class="n">1</span><span class="o">)</span> <span class="k">return</span> <span class="n">n</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">fib1</span><span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="n">1</span><span class="o">)+</span><span class="n">fib1</span><span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="n">2</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>此种方式简单明了，但运行起来会发现，随着n的增大，其耗时也随着增大变慢。其中原因在于会重复计算，如n=40时，第一次递归时计算f(39)和f(38)，第二次递归时计算f(38),f(37)以及f(37)和f(36)。为了加快效率，我们可以加入个临时存储空间，将计算过的结果存放与此。</p>
-<h3 id="递归临时存储">递归临时存储：</h3>
-<p>运用数组存放已计算过的结果，数组长度为n+1;</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kt">int</span> <span class="nf">fibWithArrayTemp</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">,</span><span class="kt">int</span><span class="o">[]</span> <span class="n">temp</span><span class="o">){</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="o">(</span><span class="n">n</span><span class="o">==</span><span class="n">0</span><span class="o">||</span><span class="n">n</span><span class="o">==</span><span class="n">1</span><span class="o">)</span> <span class="k">return</span> <span class="n">n</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">//如果该位置非0，说明已经存在计算结果
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span><span class="o">(</span><span class="n">temp</span><span class="o">[</span><span class="n">n</span><span class="o">]!=</span><span class="n">0</span><span class="o">)</span> <span class="k">return</span> <span class="n">temp</span><span class="o">[</span><span class="n">n</span><span class="o">];</span>
-</span></span><span class="line"><span class="cl">        <span class="n">temp</span><span class="o">[</span><span class="n">n</span><span class="o">]</span> <span class="o">=</span> <span class="n">fibWithArrayTemp</span><span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="n">1</span><span class="o">,</span><span class="n">temp</span><span class="o">)+</span><span class="n">fibWithArrayTemp</span><span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="n">2</span><span class="o">,</span><span class="n">temp</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">temp</span><span class="o">[</span><span class="n">n</span><span class="o">];</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="动态规划解法">动态规划解法：</h3>
-<p>以上解法都是利用递归，从上往下进行，采用动态规划，由下往上进行计算。辅助数组<code>dptable</code>用于存储计算过程中产生的结果。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kt">int</span> <span class="nf">fibWithDP</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">){</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="o">(</span><span class="n">n</span><span class="o">==</span><span class="n">0</span><span class="o">)</span> <span class="k">return</span> <span class="n">0</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span><span class="o">[]</span> <span class="n">dptable</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">+</span><span class="n">1</span><span class="o">];</span>
-</span></span><span class="line"><span class="cl">        <span class="n">dptable</span><span class="o">[</span><span class="n">0</span><span class="o">]=</span><span class="n">0</span><span class="o">;</span><span class="n">dptable</span><span class="o">[</span><span class="n">1</span><span class="o">]=</span><span class="n">1</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">2</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
-</span></span><span class="line"><span class="cl">            <span class="n">dptable</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">dptable</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="n">1</span><span class="o">]+</span><span class="n">dptable</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="n">2</span><span class="o">];</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">dptable</span><span class="o">[</span><span class="n">n</span><span class="o">];</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="动态规划解法-优化">动态规划解法-优化：</h3>
-<p>上面的都是通过创建n+1个元素数组，作为临时结果存储。空间复杂度为O(N),那还有没有可能优化一下。当然是可以的，我们可以找出规律，发现有用的都是前两个结果元素，可以只用两个变量存储即可，这样能将空间复杂度降为O(1)。</p>
+<h4 id="代码">代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -493,24 +402,71 @@ if (!doNotTrack) {
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kt">int</span> <span class="nf">fibWithDPOpt</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">){</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="o">(</span><span class="n">n</span><span class="o">==</span><span class="n">0</span><span class="o">)</span> <span class="k">return</span> <span class="n">0</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">//前后两个元素
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">int</span> <span class="n">pre</span><span class="o">=</span> <span class="n">0</span><span class="o">,</span><span class="n">post</span> <span class="o">=</span> <span class="n">1</span> <span class="o">;</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">2</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
-</span></span><span class="line"><span class="cl">            <span class="n">result</span> <span class="o">=</span> <span class="n">pre</span><span class="o">+</span><span class="n">post</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">//滚动更新前后两个元素结果
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">pre</span> <span class="o">=</span> <span class="n">post</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">post</span> <span class="o">=</span> <span class="n">result</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl">    <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     *
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @param preorder  前序数组
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @param preStart 前序数组开始坐标
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @param preEnd   前序数组结束坐标
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @param inStart  中序数组开始坐标
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @param inMap
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * @return
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">TreeNode</span> <span class="nf">buildTree</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">preorder</span><span class="o">,</span><span class="kt">int</span> <span class="n">preStart</span><span class="o">,</span><span class="kt">int</span> <span class="n">preEnd</span><span class="o">,</span><span class="kt">int</span> <span class="n">inStart</span><span class="o">,</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">inMap</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="o">(</span><span class="n">preStart</span><span class="o">&gt;</span><span class="n">preEnd</span><span class="o">)</span> <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">TreeNode</span> <span class="n">root</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeNode</span><span class="o">(</span><span class="n">preorder</span><span class="o">[</span><span class="n">preStart</span><span class="o">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//根节点在中序数组中的位置(根据中序规则，根节点左边的都为左子树)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">int</span> <span class="n">rootIdx</span> <span class="o">=</span> <span class="n">inMap</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">preorder</span><span class="o">[</span><span class="n">preStart</span><span class="o">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//中序数组中左子树长度
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">int</span> <span class="n">leftLen</span> <span class="o">=</span> <span class="n">rootIdx</span><span class="o">-</span><span class="n">inStart</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//构建左子树
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">root</span><span class="o">.</span><span class="na">left</span> <span class="o">=</span> <span class="n">buildTree</span><span class="o">(</span><span class="n">preorder</span><span class="o">,</span><span class="n">preStart</span><span class="o">+</span><span class="n">1</span><span class="o">,</span><span class="n">preStart</span><span class="o">+</span><span class="n">leftLen</span><span class="o">,</span><span class="n">inStart</span><span class="o">,</span><span class="n">inMap</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//右子树
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">root</span><span class="o">.</span><span class="na">right</span> <span class="o">=</span> <span class="n">buildTree</span><span class="o">(</span><span class="n">preorder</span><span class="o">,</span><span class="n">preStart</span><span class="o">+</span><span class="n">leftLen</span><span class="o">+</span><span class="n">1</span><span class="o">,</span><span class="n">preEnd</span><span class="o">,</span><span class="n">rootIdx</span><span class="o">+</span><span class="n">1</span><span class="o">,</span><span class="n">inMap</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">root</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">//前序数组规则：根-左-右；中序数组规则：左-根-右
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">public</span> <span class="n">TreeNode</span> <span class="nf">buildTree</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">preorder</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">inorder</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//中序数组辅助map，存放数组元素和其对应的位置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">Map</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">inMap</span> <span class="o">=</span>  <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">inorder</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">inMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">inorder</span><span class="o">[</span><span class="n">i</span><span class="o">],</span> <span class="n">i</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">buildTree</span><span class="o">(</span><span class="n">preorder</span><span class="o">,</span><span class="n">0</span><span class="o">,</span> <span class="n">preorder</span><span class="o">.</span><span class="na">length</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span><span class="n">inMap</span><span class="o">);</span>
 </span></span><span class="line"><span class="cl">    <span class="o">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div>
+</div><h4 id="效果">效果：</h4>
+<p><img src="https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202403112136460.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20240311213609410"
+	
+	
+></p>
+
 </section>
 
 
@@ -520,7 +476,7 @@ if (!doNotTrack) {
         
             <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
         
-            <a href="/tags/fibonacci/">Fibonacci</a>
+            <a href="/tags/leetcode/">leetcode</a>
         
     </section>
 
@@ -593,25 +549,6 @@ if (!doNotTrack) {
             
                 
 <article class="has-image">
-    <a href="/p/leetcode-105-%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/post/algorithm/pexels-google-deepmind-18069816.jpg" loading="lazy" data-key="" data-hash="/post/algorithm/pexels-google-deepmind-18069816.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Leetcode-105 从前序与中序遍历序列构造二叉树</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
     <a href="/p/%E5%85%A8%E6%8E%92%E5%88%97/">
         
         
@@ -624,6 +561,25 @@ if (!doNotTrack) {
 
         <div class="article-details">
             <h2 class="article-title">全排列</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E8%A7%A3%E6%B3%95/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/algorithm/pexels-google-deepmind-18069816.jpg" loading="lazy" data-key="" data-hash="/post/algorithm/pexels-google-deepmind-18069816.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">斐波那契数列解法</h2>
         </div>
     </a>
 </article>
