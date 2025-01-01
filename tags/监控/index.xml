@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>监控 on 码文</title>
-        <link>https://sailingsky.github.io/tags/%E7%9B%91%E6%8E%A7/</link>
+        <link>http://localhost:1313/tags/%E7%9B%91%E6%8E%A7/</link>
         <description>Recent content in 监控 on 码文</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Mon, 15 Jan 2024 18:46:18 +0800</lastBuildDate><atom:link href="https://sailingsky.github.io/tags/%E7%9B%91%E6%8E%A7/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 15 Jan 2024 18:46:18 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%9B%91%E6%8E%A7/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>prometheues监控mysql</title>
-        <link>https://sailingsky.github.io/p/prometheues%E7%9B%91%E6%8E%A7mysql/</link>
+        <link>http://localhost:1313/p/prometheues%E7%9B%91%E6%8E%A7mysql/</link>
         <pubDate>Mon, 15 Jan 2024 18:46:18 +0800</pubDate>
         
-        <guid>https://sailingsky.github.io/p/prometheues%E7%9B%91%E6%8E%A7mysql/</guid>
-        <description>&lt;img src="https://sailingsky.github.io/p/prometheues%E7%9B%91%E6%8E%A7mysql/Grafana-0.png" alt="Featured image of post prometheues监控mysql" /&gt;&lt;p&gt;前提装好mysql服务，还有配套的prometheus以及grafana服务。&lt;/p&gt;
+        <guid>http://localhost:1313/p/prometheues%E7%9B%91%E6%8E%A7mysql/</guid>
+        <description>&lt;img src="http://localhost:1313/p/prometheues%E7%9B%91%E6%8E%A7mysql/Grafana-0.png" alt="Featured image of post prometheues监控mysql" /&gt;&lt;p&gt;前提装好mysql服务，还有配套的prometheus以及grafana服务。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;下载mysqld_exporter

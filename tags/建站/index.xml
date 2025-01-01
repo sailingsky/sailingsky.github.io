@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>建站 on 码文</title>
-        <link>https://sailingsky.github.io/tags/%E5%BB%BA%E7%AB%99/</link>
+        <link>http://localhost:1313/tags/%E5%BB%BA%E7%AB%99/</link>
         <description>Recent content in 建站 on 码文</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 17 Sep 2023 18:07:30 +0800</lastBuildDate><atom:link href="https://sailingsky.github.io/tags/%E5%BB%BA%E7%AB%99/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 17 Sep 2023 18:07:30 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%BB%BA%E7%AB%99/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Build Blog</title>
-        <link>https://sailingsky.github.io/p/build-blog/</link>
+        <link>http://localhost:1313/p/build-blog/</link>
         <pubDate>Sun, 17 Sep 2023 18:07:30 +0800</pubDate>
         
-        <guid>https://sailingsky.github.io/p/build-blog/</guid>
-        <description>&lt;img src="https://sailingsky.github.io/p/build-blog/cover.jpg" alt="Featured image of post Build Blog" /&gt;&lt;h3 id=&#34;下载安装hugo&#34;&gt;下载安装hugo&lt;/h3&gt;
+        <guid>http://localhost:1313/p/build-blog/</guid>
+        <description>&lt;img src="http://localhost:1313/p/build-blog/cover.jpg" alt="Featured image of post Build Blog" /&gt;&lt;h3 id=&#34;下载安装hugo&#34;&gt;下载安装hugo&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;去github上下载对应系统的安装包：&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/releases/tag/v0.118.2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;hugo安装包&lt;/a&gt;。由于我是windows系统，那就下载windows版本。&lt;/li&gt;

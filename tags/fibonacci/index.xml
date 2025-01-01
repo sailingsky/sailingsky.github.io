@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Fibonacci on 码文</title>
-        <link>https://sailingsky.github.io/tags/fibonacci/</link>
+        <link>http://localhost:1313/tags/fibonacci/</link>
         <description>Recent content in Fibonacci on 码文</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Mon, 25 Sep 2023 10:52:14 +0800</lastBuildDate><atom:link href="https://sailingsky.github.io/tags/fibonacci/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 25 Sep 2023 10:52:14 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/fibonacci/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>斐波那契数列解法</title>
-        <link>https://sailingsky.github.io/p/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E8%A7%A3%E6%B3%95/</link>
+        <link>http://localhost:1313/p/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E8%A7%A3%E6%B3%95/</link>
         <pubDate>Mon, 25 Sep 2023 10:52:14 +0800</pubDate>
         
-        <guid>https://sailingsky.github.io/p/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E8%A7%A3%E6%B3%95/</guid>
-        <description>&lt;img src="https://sailingsky.github.io/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post 斐波那契数列解法" /&gt;&lt;h3 id=&#34;斐波那契数列定义&#34;&gt;斐波那契数列定义：&lt;/h3&gt;
+        <guid>http://localhost:1313/p/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E8%A7%A3%E6%B3%95/</guid>
+        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post 斐波那契数列解法" /&gt;&lt;h3 id=&#34;斐波那契数列定义&#34;&gt;斐波那契数列定义：&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;引用自维基百科：&lt;/p&gt;
 &lt;/blockquote&gt;

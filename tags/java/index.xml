@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Java on 码文</title>
-        <link>https://sailingsky.github.io/tags/java/</link>
+        <link>http://localhost:1313/tags/java/</link>
         <description>Recent content in Java on 码文</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Wed, 27 Mar 2024 11:26:32 +0800</lastBuildDate><atom:link href="https://sailingsky.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 27 Mar 2024 11:26:32 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/java/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Threadpoolexecutor使用不当的bug</title>
-        <link>https://sailingsky.github.io/p/threadpoolexecutor%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%BD%93%E7%9A%84bug/</link>
+        <link>http://localhost:1313/p/threadpoolexecutor%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%BD%93%E7%9A%84bug/</link>
         <pubDate>Wed, 27 Mar 2024 11:26:32 +0800</pubDate>
         
-        <guid>https://sailingsky.github.io/p/threadpoolexecutor%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%BD%93%E7%9A%84bug/</guid>
-        <description>&lt;img src="https://sailingsky.github.io/p/threadpoolexecutor%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%BD%93%E7%9A%84bug/neom-LAj90eAXOZA-unsplash.jpg" alt="Featured image of post Threadpoolexecutor使用不当的bug" /&gt;&lt;p&gt;ThreadPoolExecutor这个应该很多人都用过，主要用来多线程任务并行执行。当然如果用不好，也会有很多意想不到的坑，比如常见的队列用错导致堆溢出。今天说的不是这个问题，这是之前线上遇到的问题。&lt;/p&gt;
+        <guid>http://localhost:1313/p/threadpoolexecutor%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%BD%93%E7%9A%84bug/</guid>
+        <description>&lt;img src="http://localhost:1313/p/threadpoolexecutor%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%BD%93%E7%9A%84bug/neom-LAj90eAXOZA-unsplash.jpg" alt="Featured image of post Threadpoolexecutor使用不当的bug" /&gt;&lt;p&gt;ThreadPoolExecutor这个应该很多人都用过，主要用来多线程任务并行执行。当然如果用不好，也会有很多意想不到的坑，比如常见的队列用错导致堆溢出。今天说的不是这个问题，这是之前线上遇到的问题。&lt;/p&gt;
 &lt;h4 id=&#34;代码&#34;&gt;代码&lt;/h4&gt;
 &lt;p&gt;线程业务任务：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -195,11 +195,11 @@
         </item>
         <item>
         <title>sharding-jdbc实现一致性哈希分片</title>
-        <link>https://sailingsky.github.io/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E5%88%86%E7%89%87/</link>
+        <link>http://localhost:1313/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E5%88%86%E7%89%87/</link>
         <pubDate>Sat, 23 Mar 2024 21:48:33 +0800</pubDate>
         
-        <guid>https://sailingsky.github.io/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E5%88%86%E7%89%87/</guid>
-        <description>&lt;img src="https://sailingsky.github.io/post/java/sharding-jdbc/pexels-google-deepmind-17483874.jpg" alt="Featured image of post sharding-jdbc实现一致性哈希分片" /&gt;&lt;p&gt;之前的sharding-jdbc文章里读写分离水平分片采用了取余的方式，即按照当前实例数简单粗暴区域分片。而取余来说简单易懂，带来的问题也是显而易见的，就是在进行扩容的时候，会导致很多数据的迁移和查询失效。
+        <guid>http://localhost:1313/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E5%88%86%E7%89%87/</guid>
+        <description>&lt;img src="http://localhost:1313/post/java/sharding-jdbc/pexels-google-deepmind-17483874.jpg" alt="Featured image of post sharding-jdbc实现一致性哈希分片" /&gt;&lt;p&gt;之前的sharding-jdbc文章里读写分离水平分片采用了取余的方式，即按照当前实例数简单粗暴区域分片。而取余来说简单易懂，带来的问题也是显而易见的，就是在进行扩容的时候，会导致很多数据的迁移和查询失效。
 一致性哈希算法能够避免以上的问题，其扩容也只会影响一小部分数据，具体的一致性哈希可参考网上很多的博客，这里不再赘述。&lt;/p&gt;
 &lt;h4 id=&#34;一致性哈希算法定义&#34;&gt;一致性哈希算法定义&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -581,11 +581,11 @@
         </item>
         <item>
         <title>Sharding Jdbc实现读写分离&#43;水平分片</title>
-        <link>https://sailingsky.github.io/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB-%E6%B0%B4%E5%B9%B3%E5%88%86%E7%89%87/</link>
+        <link>http://localhost:1313/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB-%E6%B0%B4%E5%B9%B3%E5%88%86%E7%89%87/</link>
         <pubDate>Tue, 09 Jan 2024 21:14:46 +0800</pubDate>
         
-        <guid>https://sailingsky.github.io/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB-%E6%B0%B4%E5%B9%B3%E5%88%86%E7%89%87/</guid>
-        <description>&lt;img src="https://sailingsky.github.io/post/java/sharding-jdbc/pexels-google-deepmind-17483874.jpg" alt="Featured image of post Sharding Jdbc实现读写分离&#43;水平分片" /&gt;&lt;p&gt;日常系统开发中，经常涉及到大数据量的业务，常见的如商城系统，规模上去后，单表会经常上千万甚至上亿。仅仅靠单表肯定是无法支撑系统的规模及性能，因此诞生了分库分表的解决方案。首先，为了保证高可用，会增加主从库备份；再者为了高性能，会利用主从库进行读写分离；为了高容量，会进行分库分表。&lt;/p&gt;
+        <guid>http://localhost:1313/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB-%E6%B0%B4%E5%B9%B3%E5%88%86%E7%89%87/</guid>
+        <description>&lt;img src="http://localhost:1313/post/java/sharding-jdbc/pexels-google-deepmind-17483874.jpg" alt="Featured image of post Sharding Jdbc实现读写分离&#43;水平分片" /&gt;&lt;p&gt;日常系统开发中，经常涉及到大数据量的业务，常见的如商城系统，规模上去后，单表会经常上千万甚至上亿。仅仅靠单表肯定是无法支撑系统的规模及性能，因此诞生了分库分表的解决方案。首先，为了保证高可用，会增加主从库备份；再者为了高性能，会利用主从库进行读写分离；为了高容量，会进行分库分表。&lt;/p&gt;
 &lt;h3 id=&#34;整体架构图&#34;&gt;整体架构图：&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202401092147218.png&#34;
 	
@@ -1345,11 +1345,11 @@
         </item>
         <item>
         <title>Spring cloud gateway转发websocket请求</title>
-        <link>https://sailingsky.github.io/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/</link>
+        <link>http://localhost:1313/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/</link>
         <pubDate>Wed, 22 Nov 2023 16:45:23 +0800</pubDate>
         
-        <guid>https://sailingsky.github.io/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/</guid>
-        <description>&lt;img src="https://sailingsky.github.io/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/chris-rosiak-YSwcI_rmCYo-unsplash.jpg" alt="Featured image of post Spring cloud gateway转发websocket请求" /&gt;&lt;h3 id=&#34;websocket相关配置&#34;&gt;websocket相关配置：&lt;/h3&gt;
+        <guid>http://localhost:1313/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/</guid>
+        <description>&lt;img src="http://localhost:1313/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/chris-rosiak-YSwcI_rmCYo-unsplash.jpg" alt="Featured image of post Spring cloud gateway转发websocket请求" /&gt;&lt;h3 id=&#34;websocket相关配置&#34;&gt;websocket相关配置：&lt;/h3&gt;
 &lt;p&gt;新建了个websocket-server模块微服务。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;引入websocket依赖：&lt;/li&gt;
@@ -1898,11 +1898,11 @@
         </item>
         <item>
         <title>Spring boot 调用Grpc</title>
-        <link>https://sailingsky.github.io/p/spring-boot-%E8%B0%83%E7%94%A8grpc/</link>
+        <link>http://localhost:1313/p/spring-boot-%E8%B0%83%E7%94%A8grpc/</link>
         <pubDate>Thu, 09 Nov 2023 11:06:11 +0800</pubDate>
         
-        <guid>https://sailingsky.github.io/p/spring-boot-%E8%B0%83%E7%94%A8grpc/</guid>
-        <description>&lt;img src="https://sailingsky.github.io/p/spring-boot-%E8%B0%83%E7%94%A8grpc/steve-busch-b_nBSjoGtrU-unsplash.jpg" alt="Featured image of post Spring boot 调用Grpc" /&gt;&lt;h3 id=&#34;起因&#34;&gt;起因&lt;/h3&gt;
+        <guid>http://localhost:1313/p/spring-boot-%E8%B0%83%E7%94%A8grpc/</guid>
+        <description>&lt;img src="http://localhost:1313/p/spring-boot-%E8%B0%83%E7%94%A8grpc/steve-busch-b_nBSjoGtrU-unsplash.jpg" alt="Featured image of post Spring boot 调用Grpc" /&gt;&lt;h3 id=&#34;起因&#34;&gt;起因&lt;/h3&gt;
 &lt;p&gt;最近因工作需要，需要调用grpc服务的一个接口，以前也没接触过，接口提供方呢就扔了个proto文件过来，没法，在网上到处翻翻找找，说的都比较杂乱，缺少部分细节，就简单写个文章记录下吧。&lt;/p&gt;
 &lt;h3 id=&#34;具体细节&#34;&gt;具体细节&lt;/h3&gt;
 &lt;ul&gt;

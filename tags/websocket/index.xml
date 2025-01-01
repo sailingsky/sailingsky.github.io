@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Websocket on 码文</title>
-        <link>https://sailingsky.github.io/tags/websocket/</link>
+        <link>http://localhost:1313/tags/websocket/</link>
         <description>Recent content in Websocket on 码文</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Wed, 22 Nov 2023 16:45:23 +0800</lastBuildDate><atom:link href="https://sailingsky.github.io/tags/websocket/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 22 Nov 2023 16:45:23 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/websocket/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Spring cloud gateway转发websocket请求</title>
-        <link>https://sailingsky.github.io/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/</link>
+        <link>http://localhost:1313/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/</link>
         <pubDate>Wed, 22 Nov 2023 16:45:23 +0800</pubDate>
         
-        <guid>https://sailingsky.github.io/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/</guid>
-        <description>&lt;img src="https://sailingsky.github.io/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/chris-rosiak-YSwcI_rmCYo-unsplash.jpg" alt="Featured image of post Spring cloud gateway转发websocket请求" /&gt;&lt;h3 id=&#34;websocket相关配置&#34;&gt;websocket相关配置：&lt;/h3&gt;
+        <guid>http://localhost:1313/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/</guid>
+        <description>&lt;img src="http://localhost:1313/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/chris-rosiak-YSwcI_rmCYo-unsplash.jpg" alt="Featured image of post Spring cloud gateway转发websocket请求" /&gt;&lt;h3 id=&#34;websocket相关配置&#34;&gt;websocket相关配置：&lt;/h3&gt;
 &lt;p&gt;新建了个websocket-server模块微服务。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;引入websocket依赖：&lt;/li&gt;

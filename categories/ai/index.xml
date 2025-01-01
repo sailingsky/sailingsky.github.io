@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>AI on 码文</title>
-        <link>https://sailingsky.github.io/categories/ai/</link>
+        <link>http://localhost:1313/categories/ai/</link>
         <description>Recent content in AI on 码文</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 22 Feb 2024 15:44:27 +0800</lastBuildDate><atom:link href="https://sailingsky.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 22 Feb 2024 15:44:27 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/ai/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Whisper语音转文字</title>
-        <link>https://sailingsky.github.io/p/whisper%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97/</link>
+        <link>http://localhost:1313/p/whisper%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97/</link>
         <pubDate>Thu, 22 Feb 2024 15:44:27 +0800</pubDate>
         
-        <guid>https://sailingsky.github.io/p/whisper%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97/</guid>
-        <description>&lt;img src="https://sailingsky.github.io/post/ai/igor-omilaev-eGGFZ5X2LnA-unsplash.jpg" alt="Featured image of post Whisper语音转文字" /&gt;&lt;p&gt;最近有个需求，想把语音转成文字，网上搜了搜，能用的免费的没多少，某飞的居然要收88大洋，太贵了，买不起根本买不起。后面寻着了个免费的方法，采用whisper进行语音文字转换。&lt;/p&gt;
+        <guid>http://localhost:1313/p/whisper%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97/</guid>
+        <description>&lt;img src="http://localhost:1313/post/ai/igor-omilaev-eGGFZ5X2LnA-unsplash.jpg" alt="Featured image of post Whisper语音转文字" /&gt;&lt;p&gt;最近有个需求，想把语音转成文字，网上搜了搜，能用的免费的没多少，某飞的居然要收88大洋，太贵了，买不起根本买不起。后面寻着了个免费的方法，采用whisper进行语音文字转换。&lt;/p&gt;
 &lt;h4 id=&#34;薅个云主机&#34;&gt;薅个云主机&lt;/h4&gt;
 &lt;p&gt;进入google云盘(&lt;a class=&#34;link&#34; href=&#34;https://drive.google.com/drive/home%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://drive.google.com/drive/home)&lt;/a&gt;,新建-更多-Google Colaboratory.&lt;/p&gt;

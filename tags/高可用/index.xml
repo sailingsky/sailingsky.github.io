@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>高可用 on 码文</title>
-        <link>https://sailingsky.github.io/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/</link>
+        <link>http://localhost:1313/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/</link>
         <description>Recent content in 高可用 on 码文</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Mon, 15 Jan 2024 15:56:26 +0800</lastBuildDate><atom:link href="https://sailingsky.github.io/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 15 Jan 2024 15:56:26 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>redis集群高可用</title>
-        <link>https://sailingsky.github.io/p/redis%E9%9B%86%E7%BE%A4%E9%AB%98%E5%8F%AF%E7%94%A8/</link>
+        <link>http://localhost:1313/p/redis%E9%9B%86%E7%BE%A4%E9%AB%98%E5%8F%AF%E7%94%A8/</link>
         <pubDate>Mon, 15 Jan 2024 15:56:26 +0800</pubDate>
         
-        <guid>https://sailingsky.github.io/p/redis%E9%9B%86%E7%BE%A4%E9%AB%98%E5%8F%AF%E7%94%A8/</guid>
-        <description>&lt;img src="https://sailingsky.github.io/p/redis%E9%9B%86%E7%BE%A4%E9%AB%98%E5%8F%AF%E7%94%A8/Logo-redis.svg.png" alt="Featured image of post redis集群高可用" /&gt;&lt;h4 id=&#34;安装&#34;&gt;安装&lt;/h4&gt;
+        <guid>http://localhost:1313/p/redis%E9%9B%86%E7%BE%A4%E9%AB%98%E5%8F%AF%E7%94%A8/</guid>
+        <description>&lt;img src="http://localhost:1313/p/redis%E9%9B%86%E7%BE%A4%E9%AB%98%E5%8F%AF%E7%94%A8/Logo-redis.svg.png" alt="Featured image of post redis集群高可用" /&gt;&lt;h4 id=&#34;安装&#34;&gt;安装&lt;/h4&gt;
 &lt;h5 id=&#34;下载源码包编译&#34;&gt;下载源码包&amp;amp;编译&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

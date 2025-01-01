@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Docker on 码文</title>
-        <link>https://sailingsky.github.io/categories/docker/</link>
+        <link>http://localhost:1313/categories/docker/</link>
         <description>Recent content in Docker on 码文</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 14 Nov 2023 11:16:14 +0800</lastBuildDate><atom:link href="https://sailingsky.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 14 Nov 2023 11:16:14 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/docker/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Idea构建打包上传Docker镜像</title>
-        <link>https://sailingsky.github.io/p/idea%E6%9E%84%E5%BB%BA%E6%89%93%E5%8C%85%E4%B8%8A%E4%BC%A0docker%E9%95%9C%E5%83%8F/</link>
+        <link>http://localhost:1313/p/idea%E6%9E%84%E5%BB%BA%E6%89%93%E5%8C%85%E4%B8%8A%E4%BC%A0docker%E9%95%9C%E5%83%8F/</link>
         <pubDate>Tue, 14 Nov 2023 11:16:14 +0800</pubDate>
         
-        <guid>https://sailingsky.github.io/p/idea%E6%9E%84%E5%BB%BA%E6%89%93%E5%8C%85%E4%B8%8A%E4%BC%A0docker%E9%95%9C%E5%83%8F/</guid>
-        <description>&lt;img src="https://sailingsky.github.io/p/idea%E6%9E%84%E5%BB%BA%E6%89%93%E5%8C%85%E4%B8%8A%E4%BC%A0docker%E9%95%9C%E5%83%8F/5-maniere-deplacer-conteneur-docker-vers-autre-machine.jpeg" alt="Featured image of post Idea构建打包上传Docker镜像" /&gt;&lt;p&gt;目前很多应用开发部署都是基于Docker容器化，为了简化本地开发测试，可以在idea中进行相关配置，即可实现本地打包部署高效率。&lt;/p&gt;
+        <guid>http://localhost:1313/p/idea%E6%9E%84%E5%BB%BA%E6%89%93%E5%8C%85%E4%B8%8A%E4%BC%A0docker%E9%95%9C%E5%83%8F/</guid>
+        <description>&lt;img src="http://localhost:1313/p/idea%E6%9E%84%E5%BB%BA%E6%89%93%E5%8C%85%E4%B8%8A%E4%BC%A0docker%E9%95%9C%E5%83%8F/5-maniere-deplacer-conteneur-docker-vers-autre-machine.jpeg" alt="Featured image of post Idea构建打包上传Docker镜像" /&gt;&lt;p&gt;目前很多应用开发部署都是基于Docker容器化，为了简化本地开发测试，可以在idea中进行相关配置，即可实现本地打包部署高效率。&lt;/p&gt;
 &lt;h2 id=&#34;前置条件&#34;&gt;前置条件&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;装有Docker的服务器&lt;/li&gt;
