@@ -13,13 +13,13 @@
         
         <guid>http://localhost:1313/p/idea%E6%9E%84%E5%BB%BA%E6%89%93%E5%8C%85%E4%B8%8A%E4%BC%A0docker%E9%95%9C%E5%83%8F/</guid>
         <description>&lt;img src="http://localhost:1313/p/idea%E6%9E%84%E5%BB%BA%E6%89%93%E5%8C%85%E4%B8%8A%E4%BC%A0docker%E9%95%9C%E5%83%8F/5-maniere-deplacer-conteneur-docker-vers-autre-machine.jpeg" alt="Featured image of post Idea构建打包上传Docker镜像" /&gt;&lt;p&gt;目前很多应用开发部署都是基于Docker容器化，为了简化本地开发测试，可以在idea中进行相关配置，即可实现本地打包部署高效率。&lt;/p&gt;
-&lt;h2 id=&#34;前置条件&#34;&gt;前置条件&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;前置条件&#34;&gt;前置条件
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;装有Docker的服务器&lt;/li&gt;
 &lt;li&gt;Idea&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;docker服务器配置&#34;&gt;Docker服务器配置&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;docker服务器配置&#34;&gt;Docker服务器配置
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;修改&lt;code&gt;/usr/lib/systemd/system/docker.service&lt;/code&gt;配置：&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -73,8 +73,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;idea配置&#34;&gt;idea配置:&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;idea配置&#34;&gt;idea配置:
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;settings-&amp;gt;Build-&amp;gt;Docker&lt;/code&gt;新增docker配置，输入docker服务所在ip及之前配置的端口&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202305022112836.png&#34;
@@ -102,8 +102,8 @@
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;建立示例工程测试&#34;&gt;建立示例工程测试：&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;建立示例工程测试&#34;&gt;建立示例工程测试：
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;idea中建个springboot工程，此步骤简单略过。&lt;/p&gt;
 &lt;/li&gt;

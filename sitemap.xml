@@ -3,7 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-12-29T11:24:38+08:00</lastmod>
+    <lastmod>2025-03-31T20:00:24+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/p/mysql8%E8%A7%A3%E5%8E%8B%E5%8C%85%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2025-03-31T20:00:24+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2025-03-31T20:00:24+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2024-12-29T11:24:38+08:00</lastmod>
@@ -12,9 +18,6 @@
     <lastmod>2024-12-29T11:24:38+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/mybatis/</loc>
-    <lastmod>2024-12-29T11:24:38+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/</loc>
     <lastmod>2024-12-29T11:24:38+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/p/sqlit-jdbc%E4%B8%8Emybatis%E4%BD%BF%E7%94%A8%E9%80%A0%E6%88%90%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E9%94%99%E8%AF%AFbug/</loc>

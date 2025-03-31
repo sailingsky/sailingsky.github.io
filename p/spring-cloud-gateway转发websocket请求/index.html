@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='http://localhost:1313/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/'>
 
-<link rel="stylesheet" href="/scss/style.min.c6b767b9eb9f309b3f7894cc7606640615b31b2f961a807fafa564a6c97ece24.css"><meta property='og:title' content="Spring cloud gateway转发websocket请求">
+<link rel="stylesheet" href="/scss/style.min.d2f78c050d4403894c816f76b3019538f3efed9edad5eb96bf29b6b27b04d65b.css"><meta property='og:title' content="Spring cloud gateway转发websocket请求">
 <meta property='og:description' content="websocket相关配置： 新建了个websocket-server模块微服务。 引入websocket依赖： 1 2 3 4 5 &lt;!-- websocket --&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-websocket&lt;/artifactId&gt; &lt;/dependency&gt; 加入配置">
 <meta property='og:url' content='http://localhost:1313/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/'>
 <meta property='og:site_name' content='码文'>
@@ -86,7 +86,7 @@ if (!doNotTrack) {
             <h1 class="site-name"><a href="/">码文</a></h1>
             <h2 class="site-description">学海本无涯，惟勤是岸</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -367,8 +367,8 @@ if (!doNotTrack) {
     <section class="article-content">
     
     
-    <h3 id="websocket相关配置">websocket相关配置：</h3>
-<p>新建了个websocket-server模块微服务。</p>
+    <h3 id="websocket相关配置">websocket相关配置：
+</h3><p>新建了个websocket-server模块微服务。</p>
 <ul>
 <li>引入websocket依赖：</li>
 </ul>
@@ -576,8 +576,8 @@ if (!doNotTrack) {
 </div>
 </div></li>
 </ul>
-<h3 id="gateway配置">gateway配置：</h3>
-<ul>
+<h3 id="gateway配置">gateway配置：
+</h3><ul>
 <li>
 <p>application.yml加入路由配置：</p>
 <div class="highlight"><div class="chroma">
@@ -608,10 +608,10 @@ if (!doNotTrack) {
 </div>
 </div></li>
 </ul>
-<h3 id="趟坑排雷">趟坑排雷：</h3>
-<p>当你觉得万无一失，启动相关服务进行调试请求的时候，问题就来了：</p>
-<h4 id="ioundertowserverhttpserverexchange-cannot-be-cast-to-reactornettyhttpserverhttpserverresponse-异常">io.undertow.server.HttpServerExchange cannot be cast to reactor.netty.http.server.HttpServerResponse 异常</h4>
-<p>完整异常堆栈信息如下：</p>
+<h3 id="趟坑排雷">趟坑排雷：
+</h3><p>当你觉得万无一失，启动相关服务进行调试请求的时候，问题就来了：</p>
+<h4 id="ioundertowserverhttpserverexchange-cannot-be-cast-to-reactornettyhttpserverhttpserverresponse-异常">io.undertow.server.HttpServerExchange cannot be cast to reactor.netty.http.server.HttpServerResponse 异常
+</h4><p>完整异常堆栈信息如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -861,8 +861,8 @@ if (!doNotTrack) {
 	
 	
 ></p>
-<h4 id="nacos负载均衡">nacos负载均衡</h4>
-<p>在仔细看看之前的gateway配置，是没进行负载均衡配置的，直接固定转给某个websocket服务。环境上是需要负载均衡配置的，因此改个配置试试。</p>
+<h4 id="nacos负载均衡">nacos负载均衡
+</h4><p>在仔细看看之前的gateway配置，是没进行负载均衡配置的，直接固定转给某个websocket服务。环境上是需要负载均衡配置的，因此改个配置试试。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1010,7 +1010,7 @@ if (!doNotTrack) {
     
     <section class="powerby">
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.24.2">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -1099,7 +1099,7 @@ if (!doNotTrack) {
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.78371826a48fdc7fba5f4a1ce667a6a4144109771e7ffa600f1638f68911ec79.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

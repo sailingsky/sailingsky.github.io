@@ -13,8 +13,8 @@
         
         <guid>http://localhost:1313/p/threadpoolexecutor%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%BD%93%E7%9A%84bug/</guid>
         <description>&lt;img src="http://localhost:1313/p/threadpoolexecutor%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%BD%93%E7%9A%84bug/neom-LAj90eAXOZA-unsplash.jpg" alt="Featured image of post Threadpoolexecutor使用不当的bug" /&gt;&lt;p&gt;ThreadPoolExecutor这个应该很多人都用过，主要用来多线程任务并行执行。当然如果用不好，也会有很多意想不到的坑，比如常见的队列用错导致堆溢出。今天说的不是这个问题，这是之前线上遇到的问题。&lt;/p&gt;
-&lt;h4 id=&#34;代码&#34;&gt;代码&lt;/h4&gt;
-&lt;p&gt;线程业务任务：&lt;/p&gt;
+&lt;h4 id=&#34;代码&#34;&gt;代码
+&lt;/h4&gt;&lt;p&gt;线程业务任务：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -71,8 +71,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这个代码咋看起来，也没有什么问题吧。线程池大小，阻塞队列也用的有界队列，线程池最后也进行了关闭处理。然而，实际情况却是线程池不会关闭，因为代码根本不会执行到关闭那行。这样当代码不断执行，创建的线程池越来越多，线程池却没被关闭，最终拖垮系统。&lt;/p&gt;
-&lt;h4 id=&#34;原因&#34;&gt;原因&lt;/h4&gt;
-&lt;p&gt;我们一步步来梳理下：&lt;/p&gt;
+&lt;h4 id=&#34;原因&#34;&gt;原因
+&lt;/h4&gt;&lt;p&gt;我们一步步来梳理下：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;来了30个线程任务，扔到了线程池里&lt;/li&gt;
 &lt;li&gt;核心线程数5，那么先创建5个线程执行任务，还剩25个任务&lt;/li&gt;
@@ -124,8 +124,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;很明显，抛出异常后，后面的代码执行就被中断了，&lt;code&gt;threadPoolExecutor.shutdown()&lt;/code&gt; 这个也就不会被执行了。&lt;/p&gt;
-&lt;h4 id=&#34;优化&#34;&gt;优化&lt;/h4&gt;
-&lt;ol&gt;
+&lt;h4 id=&#34;优化&#34;&gt;优化
+&lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;将代码用try-catch包起来，像这样：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -201,8 +201,8 @@
         <guid>http://localhost:1313/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E5%88%86%E7%89%87/</guid>
         <description>&lt;img src="http://localhost:1313/post/java/sharding-jdbc/pexels-google-deepmind-17483874.jpg" alt="Featured image of post sharding-jdbc实现一致性哈希分片" /&gt;&lt;p&gt;之前的sharding-jdbc文章里读写分离水平分片采用了取余的方式，即按照当前实例数简单粗暴区域分片。而取余来说简单易懂，带来的问题也是显而易见的，就是在进行扩容的时候，会导致很多数据的迁移和查询失效。
 一致性哈希算法能够避免以上的问题，其扩容也只会影响一小部分数据，具体的一致性哈希可参考网上很多的博客，这里不再赘述。&lt;/p&gt;
-&lt;h4 id=&#34;一致性哈希算法定义&#34;&gt;一致性哈希算法定义&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h4 id=&#34;一致性哈希算法定义&#34;&gt;一致性哈希算法定义
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -366,8 +366,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;配置中设置&#34;&gt;配置中设置&lt;/h4&gt;
-&lt;p&gt;由于一致性哈希一般针对数据库来设置，所以一致性哈希分片配置只放在数据库上。关键词&lt;code&gt;consistency&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;h4 id=&#34;配置中设置&#34;&gt;配置中设置
+&lt;/h4&gt;&lt;p&gt;由于一致性哈希一般针对数据库来设置，所以一致性哈希分片配置只放在数据库上。关键词&lt;code&gt;consistency&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;  1
@@ -586,8 +586,8 @@
         
         <guid>http://localhost:1313/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB-%E6%B0%B4%E5%B9%B3%E5%88%86%E7%89%87/</guid>
         <description>&lt;img src="http://localhost:1313/post/java/sharding-jdbc/pexels-google-deepmind-17483874.jpg" alt="Featured image of post Sharding Jdbc实现读写分离&#43;水平分片" /&gt;&lt;p&gt;日常系统开发中，经常涉及到大数据量的业务，常见的如商城系统，规模上去后，单表会经常上千万甚至上亿。仅仅靠单表肯定是无法支撑系统的规模及性能，因此诞生了分库分表的解决方案。首先，为了保证高可用，会增加主从库备份；再者为了高性能，会利用主从库进行读写分离；为了高容量，会进行分库分表。&lt;/p&gt;
-&lt;h3 id=&#34;整体架构图&#34;&gt;整体架构图：&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202401092147218.png&#34;
+&lt;h3 id=&#34;整体架构图&#34;&gt;整体架构图：
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202401092147218.png&#34;
 	
 	
 	
@@ -598,10 +598,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;master0&lt;/code&gt;和&lt;code&gt;master1&lt;/code&gt;同为写库，用于数据分片，增加数据容量。&lt;code&gt;slave0&lt;/code&gt;和&lt;code&gt;slave1&lt;/code&gt;为从库，提供查询能力，分担查询压力，提升系统性能。同时作为备份库提高可靠性。&lt;/p&gt;
-&lt;h3 id=&#34;mysql高可用集群搭建&#34;&gt;mysql高可用集群搭建&lt;/h3&gt;
-&lt;h4 id=&#34;主mysql搭建&#34;&gt;主mysql搭建&lt;/h4&gt;
-&lt;h5 id=&#34;1docker创建主mysql服务&#34;&gt;1.docker创建主mysql服务&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;mysql高可用集群搭建&#34;&gt;mysql高可用集群搭建
+&lt;/h3&gt;&lt;h4 id=&#34;主mysql搭建&#34;&gt;主mysql搭建
+&lt;/h4&gt;&lt;h5 id=&#34;1docker创建主mysql服务&#34;&gt;1.docker创建主mysql服务
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -621,8 +621,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;mysql:8.0.29
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;2修改主mysql配置文件&#34;&gt;2.修改主mysql配置文件&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;2修改主mysql配置文件&#34;&gt;2.修改主mysql配置文件
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -682,8 +682,8 @@
 &lt;p&gt;binlog_format=MIXED：是以上两种level的混合使用，有函数用ROW，没函数用STATEMENT，但是无法识别系统变量&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id=&#34;3进入mysql主服务器修改登录限制&#34;&gt;3.进入mysql主服务器，修改登录限制&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h5 id=&#34;3进入mysql主服务器修改登录限制&#34;&gt;3.进入mysql主服务器，修改登录限制
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -701,8 +701,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ALTER USER &lt;span class=&#34;s1&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span class=&#34;s1&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; IDENTIFIED WITH mysql_native_password BY &lt;span class=&#34;s1&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;4-创建数据复制所用的slave用户&#34;&gt;4. 创建数据复制所用的slave用户&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;4-创建数据复制所用的slave用户&#34;&gt;4. 创建数据复制所用的slave用户
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -722,8 +722,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FLUSH PRIVILEGES&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;5-查看主mysql状态&#34;&gt;5. 查看主mysql状态&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;5-查看主mysql状态&#34;&gt;5. 查看主mysql状态
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -741,9 +741,9 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;从服务器搭建&#34;&gt;从服务器搭建&lt;/h4&gt;
-&lt;h5 id=&#34;1docker创建启动从服务器&#34;&gt;1.docker创建启动从服务器&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h4 id=&#34;从服务器搭建&#34;&gt;从服务器搭建
+&lt;/h4&gt;&lt;h5 id=&#34;1docker创建启动从服务器&#34;&gt;1.docker创建启动从服务器
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -763,8 +763,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;mysql:8.0.29
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;2-修改从服务器配置&#34;&gt;2. 修改从服务器配置&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;2-修改从服务器配置&#34;&gt;2. 修改从服务器配置
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -798,8 +798,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker restart mysql-slave1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;3-修改登录方式&#34;&gt;3. 修改登录方式&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;3-修改登录方式&#34;&gt;3. 修改登录方式
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -817,8 +817,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ALTER USER &lt;span class=&#34;s1&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span class=&#34;s1&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; IDENTIFIED WITH mysql_native_password BY &lt;span class=&#34;s1&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;4-配置主从关系&#34;&gt;4. 配置主从关系&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;4-配置主从关系&#34;&gt;4. 配置主从关系
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -830,8 +830,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MASTER_LOG_FILE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;binlog.000003&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MASTER_LOG_POS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1333&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;slave启动主从同步&#34;&gt;slave启动主从同步&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;slave启动主从同步&#34;&gt;slave启动主从同步
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -843,8 +843,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SHOW SLAVE STATUS&lt;span class=&#34;se&#34;&gt;\G&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;springboot配置&#34;&gt;SpringBoot配置&lt;/h3&gt;
-&lt;p&gt;pom.xml加入&lt;code&gt;sharding-jdbc&lt;/code&gt;,&lt;code&gt;mybatis-plus&lt;/code&gt;,&lt;code&gt;mysql驱动&lt;/code&gt;等依赖&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;springboot配置&#34;&gt;SpringBoot配置
+&lt;/h3&gt;&lt;p&gt;pom.xml加入&lt;code&gt;sharding-jdbc&lt;/code&gt;,&lt;code&gt;mybatis-plus&lt;/code&gt;,&lt;code&gt;mysql驱动&lt;/code&gt;等依赖&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -1349,8 +1349,8 @@
         <pubDate>Wed, 22 Nov 2023 16:45:23 +0800</pubDate>
         
         <guid>http://localhost:1313/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/</guid>
-        <description>&lt;img src="http://localhost:1313/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/chris-rosiak-YSwcI_rmCYo-unsplash.jpg" alt="Featured image of post Spring cloud gateway转发websocket请求" /&gt;&lt;h3 id=&#34;websocket相关配置&#34;&gt;websocket相关配置：&lt;/h3&gt;
-&lt;p&gt;新建了个websocket-server模块微服务。&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/chris-rosiak-YSwcI_rmCYo-unsplash.jpg" alt="Featured image of post Spring cloud gateway转发websocket请求" /&gt;&lt;h3 id=&#34;websocket相关配置&#34;&gt;websocket相关配置：
+&lt;/h3&gt;&lt;p&gt;新建了个websocket-server模块微服务。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;引入websocket依赖：&lt;/li&gt;
 &lt;/ul&gt;
@@ -1558,8 +1558,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;gateway配置&#34;&gt;gateway配置：&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;gateway配置&#34;&gt;gateway配置：
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;application.yml加入路由配置：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1590,10 +1590,10 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;趟坑排雷&#34;&gt;趟坑排雷：&lt;/h3&gt;
-&lt;p&gt;当你觉得万无一失，启动相关服务进行调试请求的时候，问题就来了：&lt;/p&gt;
-&lt;h4 id=&#34;ioundertowserverhttpserverexchange-cannot-be-cast-to-reactornettyhttpserverhttpserverresponse-异常&#34;&gt;io.undertow.server.HttpServerExchange cannot be cast to reactor.netty.http.server.HttpServerResponse 异常&lt;/h4&gt;
-&lt;p&gt;完整异常堆栈信息如下：&lt;/p&gt;
+&lt;h3 id=&#34;趟坑排雷&#34;&gt;趟坑排雷：
+&lt;/h3&gt;&lt;p&gt;当你觉得万无一失，启动相关服务进行调试请求的时候，问题就来了：&lt;/p&gt;
+&lt;h4 id=&#34;ioundertowserverhttpserverexchange-cannot-be-cast-to-reactornettyhttpserverhttpserverresponse-异常&#34;&gt;io.undertow.server.HttpServerExchange cannot be cast to reactor.netty.http.server.HttpServerResponse 异常
+&lt;/h4&gt;&lt;p&gt;完整异常堆栈信息如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -1843,8 +1843,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;nacos负载均衡&#34;&gt;nacos负载均衡&lt;/h4&gt;
-&lt;p&gt;在仔细看看之前的gateway配置，是没进行负载均衡配置的，直接固定转给某个websocket服务。环境上是需要负载均衡配置的，因此改个配置试试。&lt;/p&gt;
+&lt;h4 id=&#34;nacos负载均衡&#34;&gt;nacos负载均衡
+&lt;/h4&gt;&lt;p&gt;在仔细看看之前的gateway配置，是没进行负载均衡配置的，直接固定转给某个websocket服务。环境上是需要负载均衡配置的，因此改个配置试试。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1902,10 +1902,10 @@
         <pubDate>Thu, 09 Nov 2023 11:06:11 +0800</pubDate>
         
         <guid>http://localhost:1313/p/spring-boot-%E8%B0%83%E7%94%A8grpc/</guid>
-        <description>&lt;img src="http://localhost:1313/p/spring-boot-%E8%B0%83%E7%94%A8grpc/steve-busch-b_nBSjoGtrU-unsplash.jpg" alt="Featured image of post Spring boot 调用Grpc" /&gt;&lt;h3 id=&#34;起因&#34;&gt;起因&lt;/h3&gt;
-&lt;p&gt;最近因工作需要，需要调用grpc服务的一个接口，以前也没接触过，接口提供方呢就扔了个proto文件过来，没法，在网上到处翻翻找找，说的都比较杂乱，缺少部分细节，就简单写个文章记录下吧。&lt;/p&gt;
-&lt;h3 id=&#34;具体细节&#34;&gt;具体细节&lt;/h3&gt;
-&lt;ul&gt;
+        <description>&lt;img src="http://localhost:1313/p/spring-boot-%E8%B0%83%E7%94%A8grpc/steve-busch-b_nBSjoGtrU-unsplash.jpg" alt="Featured image of post Spring boot 调用Grpc" /&gt;&lt;h3 id=&#34;起因&#34;&gt;起因
+&lt;/h3&gt;&lt;p&gt;最近因工作需要，需要调用grpc服务的一个接口，以前也没接触过，接口提供方呢就扔了个proto文件过来，没法，在网上到处翻翻找找，说的都比较杂乱，缺少部分细节，就简单写个文章记录下吧。&lt;/p&gt;
+&lt;h3 id=&#34;具体细节&#34;&gt;具体细节
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;引入proto文件
 在工程&lt;code&gt;\src\main&lt;/code&gt;目录下新建proto目录，将服务提供方提供的proto文件放入该目录。&lt;/p&gt;

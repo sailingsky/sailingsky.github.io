@@ -14,8 +14,8 @@
         <guid>http://localhost:1313/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E5%88%86%E7%89%87/</guid>
         <description>&lt;img src="http://localhost:1313/post/java/sharding-jdbc/pexels-google-deepmind-17483874.jpg" alt="Featured image of post sharding-jdbc实现一致性哈希分片" /&gt;&lt;p&gt;之前的sharding-jdbc文章里读写分离水平分片采用了取余的方式，即按照当前实例数简单粗暴区域分片。而取余来说简单易懂，带来的问题也是显而易见的，就是在进行扩容的时候，会导致很多数据的迁移和查询失效。
 一致性哈希算法能够避免以上的问题，其扩容也只会影响一小部分数据，具体的一致性哈希可参考网上很多的博客，这里不再赘述。&lt;/p&gt;
-&lt;h4 id=&#34;一致性哈希算法定义&#34;&gt;一致性哈希算法定义&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h4 id=&#34;一致性哈希算法定义&#34;&gt;一致性哈希算法定义
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -179,8 +179,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;配置中设置&#34;&gt;配置中设置&lt;/h4&gt;
-&lt;p&gt;由于一致性哈希一般针对数据库来设置，所以一致性哈希分片配置只放在数据库上。关键词&lt;code&gt;consistency&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;h4 id=&#34;配置中设置&#34;&gt;配置中设置
+&lt;/h4&gt;&lt;p&gt;由于一致性哈希一般针对数据库来设置，所以一致性哈希分片配置只放在数据库上。关键词&lt;code&gt;consistency&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;  1
@@ -399,8 +399,8 @@
         
         <guid>http://localhost:1313/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB-%E6%B0%B4%E5%B9%B3%E5%88%86%E7%89%87/</guid>
         <description>&lt;img src="http://localhost:1313/post/java/sharding-jdbc/pexels-google-deepmind-17483874.jpg" alt="Featured image of post Sharding Jdbc实现读写分离&#43;水平分片" /&gt;&lt;p&gt;日常系统开发中，经常涉及到大数据量的业务，常见的如商城系统，规模上去后，单表会经常上千万甚至上亿。仅仅靠单表肯定是无法支撑系统的规模及性能，因此诞生了分库分表的解决方案。首先，为了保证高可用，会增加主从库备份；再者为了高性能，会利用主从库进行读写分离；为了高容量，会进行分库分表。&lt;/p&gt;
-&lt;h3 id=&#34;整体架构图&#34;&gt;整体架构图：&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202401092147218.png&#34;
+&lt;h3 id=&#34;整体架构图&#34;&gt;整体架构图：
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202401092147218.png&#34;
 	
 	
 	
@@ -411,10 +411,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;master0&lt;/code&gt;和&lt;code&gt;master1&lt;/code&gt;同为写库，用于数据分片，增加数据容量。&lt;code&gt;slave0&lt;/code&gt;和&lt;code&gt;slave1&lt;/code&gt;为从库，提供查询能力，分担查询压力，提升系统性能。同时作为备份库提高可靠性。&lt;/p&gt;
-&lt;h3 id=&#34;mysql高可用集群搭建&#34;&gt;mysql高可用集群搭建&lt;/h3&gt;
-&lt;h4 id=&#34;主mysql搭建&#34;&gt;主mysql搭建&lt;/h4&gt;
-&lt;h5 id=&#34;1docker创建主mysql服务&#34;&gt;1.docker创建主mysql服务&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;mysql高可用集群搭建&#34;&gt;mysql高可用集群搭建
+&lt;/h3&gt;&lt;h4 id=&#34;主mysql搭建&#34;&gt;主mysql搭建
+&lt;/h4&gt;&lt;h5 id=&#34;1docker创建主mysql服务&#34;&gt;1.docker创建主mysql服务
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -434,8 +434,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;mysql:8.0.29
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;2修改主mysql配置文件&#34;&gt;2.修改主mysql配置文件&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;2修改主mysql配置文件&#34;&gt;2.修改主mysql配置文件
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -495,8 +495,8 @@
 &lt;p&gt;binlog_format=MIXED：是以上两种level的混合使用，有函数用ROW，没函数用STATEMENT，但是无法识别系统变量&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id=&#34;3进入mysql主服务器修改登录限制&#34;&gt;3.进入mysql主服务器，修改登录限制&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h5 id=&#34;3进入mysql主服务器修改登录限制&#34;&gt;3.进入mysql主服务器，修改登录限制
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -514,8 +514,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ALTER USER &lt;span class=&#34;s1&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span class=&#34;s1&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; IDENTIFIED WITH mysql_native_password BY &lt;span class=&#34;s1&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;4-创建数据复制所用的slave用户&#34;&gt;4. 创建数据复制所用的slave用户&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;4-创建数据复制所用的slave用户&#34;&gt;4. 创建数据复制所用的slave用户
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -535,8 +535,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FLUSH PRIVILEGES&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;5-查看主mysql状态&#34;&gt;5. 查看主mysql状态&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;5-查看主mysql状态&#34;&gt;5. 查看主mysql状态
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -554,9 +554,9 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;从服务器搭建&#34;&gt;从服务器搭建&lt;/h4&gt;
-&lt;h5 id=&#34;1docker创建启动从服务器&#34;&gt;1.docker创建启动从服务器&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h4 id=&#34;从服务器搭建&#34;&gt;从服务器搭建
+&lt;/h4&gt;&lt;h5 id=&#34;1docker创建启动从服务器&#34;&gt;1.docker创建启动从服务器
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -576,8 +576,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;mysql:8.0.29
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;2-修改从服务器配置&#34;&gt;2. 修改从服务器配置&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;2-修改从服务器配置&#34;&gt;2. 修改从服务器配置
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -611,8 +611,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker restart mysql-slave1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;3-修改登录方式&#34;&gt;3. 修改登录方式&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;3-修改登录方式&#34;&gt;3. 修改登录方式
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -630,8 +630,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ALTER USER &lt;span class=&#34;s1&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span class=&#34;s1&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; IDENTIFIED WITH mysql_native_password BY &lt;span class=&#34;s1&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;4-配置主从关系&#34;&gt;4. 配置主从关系&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;4-配置主从关系&#34;&gt;4. 配置主从关系
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -643,8 +643,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MASTER_LOG_FILE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;binlog.000003&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MASTER_LOG_POS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1333&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;slave启动主从同步&#34;&gt;slave启动主从同步&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;slave启动主从同步&#34;&gt;slave启动主从同步
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -656,8 +656,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SHOW SLAVE STATUS&lt;span class=&#34;se&#34;&gt;\G&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;springboot配置&#34;&gt;SpringBoot配置&lt;/h3&gt;
-&lt;p&gt;pom.xml加入&lt;code&gt;sharding-jdbc&lt;/code&gt;,&lt;code&gt;mybatis-plus&lt;/code&gt;,&lt;code&gt;mysql驱动&lt;/code&gt;等依赖&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;springboot配置&#34;&gt;SpringBoot配置
+&lt;/h3&gt;&lt;p&gt;pom.xml加入&lt;code&gt;sharding-jdbc&lt;/code&gt;,&lt;code&gt;mybatis-plus&lt;/code&gt;,&lt;code&gt;mysql驱动&lt;/code&gt;等依赖&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1

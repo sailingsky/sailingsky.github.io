@@ -12,8 +12,8 @@
         <pubDate>Sun, 17 Sep 2023 18:07:30 +0800</pubDate>
         
         <guid>http://localhost:1313/p/build-blog/</guid>
-        <description>&lt;img src="http://localhost:1313/p/build-blog/cover.jpg" alt="Featured image of post Build Blog" /&gt;&lt;h3 id=&#34;下载安装hugo&#34;&gt;下载安装hugo&lt;/h3&gt;
-&lt;ul&gt;
+        <description>&lt;img src="http://localhost:1313/p/build-blog/cover.jpg" alt="Featured image of post Build Blog" /&gt;&lt;h3 id=&#34;下载安装hugo&#34;&gt;下载安装hugo
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;去github上下载对应系统的安装包：&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/releases/tag/v0.118.2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;hugo安装包&lt;/a&gt;。由于我是windows系统，那就下载windows版本。&lt;/li&gt;
 &lt;li&gt;下载完成后，解压将安装文件放至到某个目录。修改环境变量path,添加刚才hugo文件所在路径。&lt;/li&gt;
@@ -29,9 +29,9 @@
 	
 &gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;创建github仓库&#34;&gt;创建Github仓库&lt;/h3&gt;
-&lt;h4 id=&#34;创建博客源文件内容仓库&#34;&gt;创建博客源文件内容仓库：&lt;/h4&gt;
-&lt;p&gt;名字随意取
+&lt;h3 id=&#34;创建github仓库&#34;&gt;创建Github仓库
+&lt;/h3&gt;&lt;h4 id=&#34;创建博客源文件内容仓库&#34;&gt;创建博客源文件内容仓库：
+&lt;/h4&gt;&lt;p&gt;名字随意取
 &lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202309170955055.png&#34;
 	
 	
@@ -42,8 +42,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;创建github-pages仓库&#34;&gt;创建GitHub Pages仓库：&lt;/h4&gt;
-&lt;p&gt;仓库名称必须使用&lt;code&gt;&amp;lt;username.github.io&amp;gt;&lt;/code&gt;的格式，&lt;code&gt;username&lt;/code&gt;为GitHub的用户名:
+&lt;h4 id=&#34;创建github-pages仓库&#34;&gt;创建GitHub Pages仓库：
+&lt;/h4&gt;&lt;p&gt;仓库名称必须使用&lt;code&gt;&amp;lt;username.github.io&amp;gt;&lt;/code&gt;的格式，&lt;code&gt;username&lt;/code&gt;为GitHub的用户名:
 &lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202309171000912.png&#34;
 	
 	
@@ -100,8 +100,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;~~### 配置主题&lt;/p&gt;
 &lt;p&gt;将&lt;code&gt;themes\hugo-theme-stack\exampleSite&lt;/code&gt;里面的&lt;code&gt;content&lt;/code&gt;文件以及&lt;code&gt;config.yaml&lt;/code&gt;拷贝覆盖到根目录下&lt;/p&gt;
-&lt;h3 id=&#34;更简单的作法前面删除线的步骤皆可不用&#34;&gt;更简单的作法，前面删除线的步骤皆可不用！&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;更简单的作法前面删除线的步骤皆可不用&#34;&gt;更简单的作法，前面删除线的步骤皆可不用！
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;如果确定使用&lt;code&gt;stack&lt;/code&gt;主题，直接去GitHub下载&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack-starter&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;stack-starter&lt;/a&gt;工程。&lt;/li&gt;
 &lt;li&gt;修改&lt;code&gt;config\_default&lt;/code&gt;目录下的&lt;code&gt;config.toml&lt;/code&gt;文件，将&lt;code&gt;baseurl&lt;/code&gt;修改为：&lt;code&gt;https://&amp;lt;github-username&amp;gt;.github.io/&lt;/code&gt;&lt;/li&gt;
@@ -137,8 +137,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; git push origin main
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;查看效果&#34;&gt;查看效果：&lt;/h3&gt;
-&lt;p&gt;接着你就可以访问&lt;code&gt;https://&amp;lt;github-username&amp;gt;.github.io&lt;/code&gt;查看效果了：
+&lt;/div&gt;&lt;h3 id=&#34;查看效果&#34;&gt;查看效果：
+&lt;/h3&gt;&lt;p&gt;接着你就可以访问&lt;code&gt;https://&amp;lt;github-username&amp;gt;.github.io&lt;/code&gt;查看效果了：
 &lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202309171759286.png&#34;
 	
 	

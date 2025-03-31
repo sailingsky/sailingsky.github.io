@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='http://localhost:1313/p/threadpoolexecutor%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%BD%93%E7%9A%84bug/'>
 
-<link rel="stylesheet" href="/scss/style.min.c6b767b9eb9f309b3f7894cc7606640615b31b2f961a807fafa564a6c97ece24.css"><meta property='og:title' content="Threadpoolexecutor使用不当的bug">
+<link rel="stylesheet" href="/scss/style.min.d2f78c050d4403894c816f76b3019538f3efed9edad5eb96bf29b6b27b04d65b.css"><meta property='og:title' content="Threadpoolexecutor使用不当的bug">
 <meta property='og:description' content="ThreadPoolExecutor这个应该很多人都用过，主要用来多线程任务并行执行。当然如果用不好，也会有很多意想不到的坑，比如常见的队列">
 <meta property='og:url' content='http://localhost:1313/p/threadpoolexecutor%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%BD%93%E7%9A%84bug/'>
 <meta property='og:site_name' content='码文'>
@@ -86,7 +86,7 @@ if (!doNotTrack) {
             <h1 class="site-name"><a href="/">码文</a></h1>
             <h2 class="site-description">学海本无涯，惟勤是岸</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -363,8 +363,8 @@ if (!doNotTrack) {
     
     
     <p>ThreadPoolExecutor这个应该很多人都用过，主要用来多线程任务并行执行。当然如果用不好，也会有很多意想不到的坑，比如常见的队列用错导致堆溢出。今天说的不是这个问题，这是之前线上遇到的问题。</p>
-<h4 id="代码">代码</h4>
-<p>线程业务任务：</p>
+<h4 id="代码">代码
+</h4><p>线程业务任务：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -421,8 +421,8 @@ if (!doNotTrack) {
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>这个代码咋看起来，也没有什么问题吧。线程池大小，阻塞队列也用的有界队列，线程池最后也进行了关闭处理。然而，实际情况却是线程池不会关闭，因为代码根本不会执行到关闭那行。这样当代码不断执行，创建的线程池越来越多，线程池却没被关闭，最终拖垮系统。</p>
-<h4 id="原因">原因</h4>
-<p>我们一步步来梳理下：</p>
+<h4 id="原因">原因
+</h4><p>我们一步步来梳理下：</p>
 <ul>
 <li>来了30个线程任务，扔到了线程池里</li>
 <li>核心线程数5，那么先创建5个线程执行任务，还剩25个任务</li>
@@ -474,8 +474,8 @@ if (!doNotTrack) {
 	
 ></p>
 <p>很明显，抛出异常后，后面的代码执行就被中断了，<code>threadPoolExecutor.shutdown()</code> 这个也就不会被执行了。</p>
-<h4 id="优化">优化</h4>
-<ol>
+<h4 id="优化">优化
+</h4><ol>
 <li>
 <p>将代码用try-catch包起来，像这样：</p>
 <div class="highlight"><div class="chroma">
@@ -637,7 +637,7 @@ if (!doNotTrack) {
     
     <section class="powerby">
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.24.2">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -726,7 +726,7 @@ if (!doNotTrack) {
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.78371826a48fdc7fba5f4a1ce667a6a4144109771e7ffa600f1638f68911ec79.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

@@ -13,8 +13,8 @@
         
         <guid>http://localhost:1313/p/sqlit-jdbc%E4%B8%8Emybatis%E4%BD%BF%E7%94%A8%E9%80%A0%E6%88%90%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E9%94%99%E8%AF%AFbug/</guid>
         <description>&lt;img src="http://localhost:1313/p/sqlit-jdbc%E4%B8%8Emybatis%E4%BD%BF%E7%94%A8%E9%80%A0%E6%88%90%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E9%94%99%E8%AF%AFbug/hari-nandakumar-hh9OkRFj-Pw-unsplash.jpg" alt="Featured image of post sqlit-jdbc与mybatis使用造成类型转换错误bug" /&gt;&lt;p&gt;最近在项目中用到sqlite数据库作为底层数据存储，驱动层顺理成章的采用了sqlite-jdbc+mybatis的组合，但在使用的过程中，偶现了一个非常奇异的bug.&lt;/p&gt;
-&lt;h4 id=&#34;复现&#34;&gt;复现：&lt;/h4&gt;
-&lt;p&gt;相关组件版本：&lt;/p&gt;
+&lt;h4 id=&#34;复现&#34;&gt;复现：
+&lt;/h4&gt;&lt;p&gt;相关组件版本：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;sqlite-jdbc 3.46.1.0&lt;/li&gt;
 &lt;li&gt;mybatis-spring-boot-starter 3.0.3&lt;/li&gt;
@@ -75,8 +75,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;很明显，第2条记录的id值被改变了，bug就这样产生了。&lt;/p&gt;
-&lt;h4 id=&#34;根源&#34;&gt;根源&lt;/h4&gt;
-&lt;p&gt;追踪整个代码执行逻辑，关键链路如下：&lt;/p&gt;
+&lt;h4 id=&#34;根源&#34;&gt;根源
+&lt;/h4&gt;&lt;p&gt;追踪整个代码执行逻辑，关键链路如下：&lt;/p&gt;
 &lt;p&gt;DefaultResultSetHandler.java#createAutomaticMappings &amp;mdash;&amp;gt;ResultSetWrapper.java#getTypeHandler&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -184,8 +184,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;解决方案&#34;&gt;解决方案：&lt;/h4&gt;
-&lt;p&gt;针对这个问题，我向sqlite-jdbc和mybatis都提了个issue,https://github.com/xerial/sqlite-jdbc/issues/1177 和 &lt;a class=&#34;link&#34; href=&#34;https://github.com/mybatis/mybatis-3/issues/3242&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h4 id=&#34;解决方案&#34;&gt;解决方案：
+&lt;/h4&gt;&lt;p&gt;针对这个问题，我向sqlite-jdbc和mybatis都提了个issue,https://github.com/xerial/sqlite-jdbc/issues/1177 和 &lt;a class=&#34;link&#34; href=&#34;https://github.com/mybatis/mybatis-3/issues/3242&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/mybatis/mybatis-3/issues/3242&lt;/a&gt;。最后得出的结论：在sqlite中，最好在mapper中resultType使用具体的pojo类型，而不是使用&lt;code&gt;java.util.map&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

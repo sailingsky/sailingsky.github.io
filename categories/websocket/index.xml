@@ -12,8 +12,8 @@
         <pubDate>Wed, 22 Nov 2023 16:45:23 +0800</pubDate>
         
         <guid>http://localhost:1313/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/</guid>
-        <description>&lt;img src="http://localhost:1313/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/chris-rosiak-YSwcI_rmCYo-unsplash.jpg" alt="Featured image of post Spring cloud gateway转发websocket请求" /&gt;&lt;h3 id=&#34;websocket相关配置&#34;&gt;websocket相关配置：&lt;/h3&gt;
-&lt;p&gt;新建了个websocket-server模块微服务。&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/chris-rosiak-YSwcI_rmCYo-unsplash.jpg" alt="Featured image of post Spring cloud gateway转发websocket请求" /&gt;&lt;h3 id=&#34;websocket相关配置&#34;&gt;websocket相关配置：
+&lt;/h3&gt;&lt;p&gt;新建了个websocket-server模块微服务。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;引入websocket依赖：&lt;/li&gt;
 &lt;/ul&gt;
@@ -221,8 +221,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;gateway配置&#34;&gt;gateway配置：&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;gateway配置&#34;&gt;gateway配置：
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;application.yml加入路由配置：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -253,10 +253,10 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;趟坑排雷&#34;&gt;趟坑排雷：&lt;/h3&gt;
-&lt;p&gt;当你觉得万无一失，启动相关服务进行调试请求的时候，问题就来了：&lt;/p&gt;
-&lt;h4 id=&#34;ioundertowserverhttpserverexchange-cannot-be-cast-to-reactornettyhttpserverhttpserverresponse-异常&#34;&gt;io.undertow.server.HttpServerExchange cannot be cast to reactor.netty.http.server.HttpServerResponse 异常&lt;/h4&gt;
-&lt;p&gt;完整异常堆栈信息如下：&lt;/p&gt;
+&lt;h3 id=&#34;趟坑排雷&#34;&gt;趟坑排雷：
+&lt;/h3&gt;&lt;p&gt;当你觉得万无一失，启动相关服务进行调试请求的时候，问题就来了：&lt;/p&gt;
+&lt;h4 id=&#34;ioundertowserverhttpserverexchange-cannot-be-cast-to-reactornettyhttpserverhttpserverresponse-异常&#34;&gt;io.undertow.server.HttpServerExchange cannot be cast to reactor.netty.http.server.HttpServerResponse 异常
+&lt;/h4&gt;&lt;p&gt;完整异常堆栈信息如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -506,8 +506,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;nacos负载均衡&#34;&gt;nacos负载均衡&lt;/h4&gt;
-&lt;p&gt;在仔细看看之前的gateway配置，是没进行负载均衡配置的，直接固定转给某个websocket服务。环境上是需要负载均衡配置的，因此改个配置试试。&lt;/p&gt;
+&lt;h4 id=&#34;nacos负载均衡&#34;&gt;nacos负载均衡
+&lt;/h4&gt;&lt;p&gt;在仔细看看之前的gateway配置，是没进行负载均衡配置的，直接固定转给某个websocket服务。环境上是需要负载均衡配置的，因此改个配置试试。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1

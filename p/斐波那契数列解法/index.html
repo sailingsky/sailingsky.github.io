@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='http://localhost:1313/p/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E8%A7%A3%E6%B3%95/'>
 
-<link rel="stylesheet" href="/scss/style.min.c6b767b9eb9f309b3f7894cc7606640615b31b2f961a807fafa564a6c97ece24.css"><meta property='og:title' content="斐波那契数列解法">
+<link rel="stylesheet" href="/scss/style.min.d2f78c050d4403894c816f76b3019538f3efed9edad5eb96bf29b6b27b04d65b.css"><meta property='og:title' content="斐波那契数列解法">
 <meta property='og:description' content="斐波那契数列定义： 引用自维基百科： 斐波那契数（意大利语：Successione di Fibonacci），又译为菲波拿契数、菲波那西数、斐氏数、">
 <meta property='og:url' content='http://localhost:1313/p/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E8%A7%A3%E6%B3%95/'>
 <meta property='og:site_name' content='码文'>
@@ -86,7 +86,7 @@ if (!doNotTrack) {
             <h1 class="site-name"><a href="/">码文</a></h1>
             <h2 class="site-description">学海本无涯，惟勤是岸</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -356,8 +356,8 @@ if (!doNotTrack) {
     <section class="article-content">
     
     
-    <h3 id="斐波那契数列定义">斐波那契数列定义：</h3>
-<blockquote>
+    <h3 id="斐波那契数列定义">斐波那契数列定义：
+</h3><blockquote>
 <p>引用自维基百科：</p>
 </blockquote>
 <p><strong>斐波那契数</strong>（<a class="link" href="https://zh.wikipedia.org/wiki/%e6%84%8f%e5%a4%a7%e5%88%a9%e8%af%ad"  target="_blank" rel="noopener"
@@ -412,8 +412,8 @@ if (!doNotTrack) {
 >)</li>
 </ul>
 <p>用文字来说，就是斐波那契数列由0和1开始，之后的斐波那契数就是由之前的两数相加而得出。</p>
-<h3 id="递归解法1">递归解法1：</h3>
-<p>根据其数学定义，采用递归方式，直译成代码：</p>
+<h3 id="递归解法1">递归解法1：
+</h3><p>根据其数学定义，采用递归方式，直译成代码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -429,8 +429,8 @@ if (!doNotTrack) {
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>此种方式简单明了，但运行起来会发现，随着n的增大，其耗时也随着增大变慢。其中原因在于会重复计算，如n=40时，第一次递归时计算f(39)和f(38)，第二次递归时计算f(38),f(37)以及f(37)和f(36)。为了加快效率，我们可以加入个临时存储空间，将计算过的结果存放与此。</p>
-<h3 id="递归临时存储">递归临时存储：</h3>
-<p>运用数组存放已计算过的结果，数组长度为n+1;</p>
+<h3 id="递归临时存储">递归临时存储：
+</h3><p>运用数组存放已计算过的结果，数组长度为n+1;</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -451,8 +451,8 @@ if (!doNotTrack) {
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="动态规划解法">动态规划解法：</h3>
-<p>以上解法都是利用递归，从上往下进行，采用动态规划，由下往上进行计算。辅助数组<code>dptable</code>用于存储计算过程中产生的结果。</p>
+</div><h3 id="动态规划解法">动态规划解法：
+</h3><p>以上解法都是利用递归，从上往下进行，采用动态规划，由下往上进行计算。辅助数组<code>dptable</code>用于存储计算过程中产生的结果。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -477,8 +477,8 @@ if (!doNotTrack) {
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="动态规划解法-优化">动态规划解法-优化：</h3>
-<p>上面的都是通过创建n+1个元素数组，作为临时结果存储。空间复杂度为O(N),那还有没有可能优化一下。当然是可以的，我们可以找出规律，发现有用的都是前两个结果元素，可以只用两个变量存储即可，这样能将空间复杂度降为O(1)。</p>
+</div><h3 id="动态规划解法-优化">动态规划解法-优化：
+</h3><p>上面的都是通过创建n+1个元素数组，作为临时结果存储。空间复杂度为O(N),那还有没有可能优化一下。当然是可以的，我们可以找出规律，发现有用的都是前两个结果元素，可以只用两个变量存储即可，这样能将空间复杂度降为O(1)。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -692,7 +692,7 @@ if (!doNotTrack) {
     
     <section class="powerby">
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.24.2">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -781,7 +781,7 @@ if (!doNotTrack) {
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.78371826a48fdc7fba5f4a1ce667a6a4144109771e7ffa600f1638f68911ec79.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

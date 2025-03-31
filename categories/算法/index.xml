@@ -12,8 +12,8 @@
         <pubDate>Mon, 11 Mar 2024 21:56:55 +0800</pubDate>
         
         <guid>http://localhost:1313/p/leetcode-746-%E6%9C%80%E5%B0%8F%E4%BB%A3%E4%BB%B7%E7%88%AC%E6%A5%BC%E6%A2%AF/</guid>
-        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post Leetcode-746 最小代价爬楼梯" /&gt;&lt;h4 id=&#34;题目描述&#34;&gt;题目描述&lt;/h4&gt;
-&lt;p&gt;给你一个整数数组 &lt;code&gt;cost&lt;/code&gt; ，其中 &lt;code&gt;cost[i]&lt;/code&gt; 是从楼梯第 &lt;code&gt;i&lt;/code&gt; 个台阶向上爬需要支付的费用。一旦你支付此费用，即可选择向上爬一个或者两个台阶。&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post Leetcode-746 最小代价爬楼梯" /&gt;&lt;h4 id=&#34;题目描述&#34;&gt;题目描述
+&lt;/h4&gt;&lt;p&gt;给你一个整数数组 &lt;code&gt;cost&lt;/code&gt; ，其中 &lt;code&gt;cost[i]&lt;/code&gt; 是从楼梯第 &lt;code&gt;i&lt;/code&gt; 个台阶向上爬需要支付的费用。一旦你支付此费用，即可选择向上爬一个或者两个台阶。&lt;/p&gt;
 &lt;p&gt;你可以选择从下标为 &lt;code&gt;0&lt;/code&gt; 或下标为 &lt;code&gt;1&lt;/code&gt; 的台阶开始爬楼梯。&lt;/p&gt;
 &lt;p&gt;请你计算并返回达到楼梯顶部的最低花费。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
@@ -33,10 +33,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;总花费为 15 。
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;解题思路&#34;&gt;解题思路&lt;/h4&gt;
-&lt;p&gt;和之前&lt;code&gt;leetcode-70 爬楼梯&lt;/code&gt;类似，第i个阶梯的最小代价公式为:d(i)=min(d(i-1),d(i-2))+c(i)&lt;/p&gt;
-&lt;h4 id=&#34;代码&#34;&gt;代码&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;解题思路&#34;&gt;解题思路
+&lt;/h4&gt;&lt;p&gt;和之前&lt;code&gt;leetcode-70 爬楼梯&lt;/code&gt;类似，第i个阶梯的最小代价公式为:d(i)=min(d(i-1),d(i-2))+c(i)&lt;/p&gt;
+&lt;h4 id=&#34;代码&#34;&gt;代码
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -84,8 +84,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;效果&#34;&gt;效果&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202403112204724.png&#34;
+&lt;/div&gt;&lt;h4 id=&#34;效果&#34;&gt;效果
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202403112204724.png&#34;
 	
 	
 	
@@ -103,8 +103,8 @@
         <pubDate>Mon, 11 Mar 2024 21:39:57 +0800</pubDate>
         
         <guid>http://localhost:1313/p/leetcode-70-%E7%88%AC%E6%A5%BC%E6%A2%AF/</guid>
-        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post Leetcode-70 爬楼梯" /&gt;&lt;h4 id=&#34;题目描述&#34;&gt;题目描述&lt;/h4&gt;
-&lt;p&gt;假设你正在爬楼梯。需要 &lt;code&gt;n&lt;/code&gt; 阶你才能到达楼顶。&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post Leetcode-70 爬楼梯" /&gt;&lt;h4 id=&#34;题目描述&#34;&gt;题目描述
+&lt;/h4&gt;&lt;p&gt;假设你正在爬楼梯。需要 &lt;code&gt;n&lt;/code&gt; 阶你才能到达楼顶。&lt;/p&gt;
 &lt;p&gt;每次你可以爬 &lt;code&gt;1&lt;/code&gt; 或 &lt;code&gt;2&lt;/code&gt; 个台阶。你有多少种不同的方法可以爬到楼顶呢？&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -123,13 +123,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. 2 阶
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;解题思路&#34;&gt;解题思路&lt;/h4&gt;
-&lt;p&gt;当n=1, 有1种（1阶）方法，即f(1)=1;&lt;/p&gt;
+&lt;/div&gt;&lt;h4 id=&#34;解题思路&#34;&gt;解题思路
+&lt;/h4&gt;&lt;p&gt;当n=1, 有1种（1阶）方法，即f(1)=1;&lt;/p&gt;
 &lt;p&gt;当n=2, 有2种（1 阶 + 1 阶;2阶）方法，即f(2)=2;&lt;/p&gt;
 &lt;p&gt;当n=3, 有3种(1 阶 + 1 阶+1阶;2阶+1阶；1阶+2阶)方法，即f(3)=3=f(2)+f(1);&lt;/p&gt;
 &lt;p&gt;利用数学归纳法，可得f(n)=f(n-1)+f(n-2),典型的斐波那契数列;&lt;/p&gt;
-&lt;h4 id=&#34;代码&#34;&gt;代码&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h4 id=&#34;代码&#34;&gt;代码
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -155,8 +155,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;效果&#34;&gt;效果&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202403112151065.png&#34;
+&lt;/div&gt;&lt;h4 id=&#34;效果&#34;&gt;效果
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202403112151065.png&#34;
 	
 	
 	
@@ -174,8 +174,8 @@
         <pubDate>Mon, 11 Mar 2024 21:25:08 +0800</pubDate>
         
         <guid>http://localhost:1313/p/leetcode-105-%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
-        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post Leetcode-105 从前序与中序遍历序列构造二叉树" /&gt;&lt;h4 id=&#34;题目描述&#34;&gt;题目描述&lt;/h4&gt;
-&lt;p&gt;给定两个整数数组 &lt;code&gt;preorder&lt;/code&gt; 和 &lt;code&gt;inorder&lt;/code&gt; ，其中 &lt;code&gt;preorder&lt;/code&gt; 是二叉树的&lt;strong&gt;先序遍历&lt;/strong&gt;， &lt;code&gt;inorder&lt;/code&gt; 是同一棵树的&lt;strong&gt;中序遍历&lt;/strong&gt;，请构造二叉树并返回其根节点。&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post Leetcode-105 从前序与中序遍历序列构造二叉树" /&gt;&lt;h4 id=&#34;题目描述&#34;&gt;题目描述
+&lt;/h4&gt;&lt;p&gt;给定两个整数数组 &lt;code&gt;preorder&lt;/code&gt; 和 &lt;code&gt;inorder&lt;/code&gt; ，其中 &lt;code&gt;preorder&lt;/code&gt; 是二叉树的&lt;strong&gt;先序遍历&lt;/strong&gt;， &lt;code&gt;inorder&lt;/code&gt; 是同一棵树的&lt;strong&gt;中序遍历&lt;/strong&gt;，请构造二叉树并返回其根节点。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://assets.leetcode.com/uploads/2021/02/19/tree.jpg&#34;
 	
@@ -197,13 +197,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;输出: [3,9,20,null,null,15,7]
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;解题思路&#34;&gt;解题思路&lt;/h4&gt;
-&lt;ul&gt;
+&lt;/div&gt;&lt;h4 id=&#34;解题思路&#34;&gt;解题思路
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;利用规则，前序数组规则是：根-左-右 ，中序数组规则是：左-根-右&lt;/li&gt;
 &lt;li&gt;以前序数组为主，确定好左子树的长度（而左子树的长度，可以从中序数组中根左边数字长度获得），接着就能分别对左右子树进行递归构造。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;代码&#34;&gt;代码&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h4 id=&#34;代码&#34;&gt;代码
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -271,8 +271,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;效果&#34;&gt;效果：&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202403112136460.png&#34;
+&lt;/div&gt;&lt;h4 id=&#34;效果&#34;&gt;效果：
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202403112136460.png&#34;
 	
 	
 	
@@ -290,8 +290,8 @@
         <pubDate>Mon, 13 Nov 2023 17:30:56 +0800</pubDate>
         
         <guid>http://localhost:1313/p/%E5%85%A8%E6%8E%92%E5%88%97/</guid>
-        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post 全排列" /&gt;&lt;h3 id=&#34;题目定义&#34;&gt;题目定义：&lt;/h3&gt;
-&lt;p&gt;给定一个不含重复数字的数组 nums ，返回其 所有可能的全排列 。你可以 按任意顺序 返回答案。&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post 全排列" /&gt;&lt;h3 id=&#34;题目定义&#34;&gt;题目定义：
+&lt;/h3&gt;&lt;p&gt;给定一个不含重复数字的数组 nums ，返回其 所有可能的全排列 。你可以 按任意顺序 返回答案。&lt;/p&gt;
 &lt;p&gt;示例 1：&lt;/p&gt;
 &lt;p&gt;输入：nums = [1,2,3]
 输出：[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
@@ -301,8 +301,8 @@
 示例 3：&lt;/p&gt;
 &lt;p&gt;输入：nums = [1]
 输出：[[1]]&lt;/p&gt;
-&lt;h3 id=&#34;整体算法思路&#34;&gt;整体算法思路：&lt;/h3&gt;
-&lt;p&gt;采用回溯算法，遍历循环数组，形成路径，每一层中循环的都是数组的所有元素，为了不使元素重复，加入额外的存储空间存储判断。&lt;/p&gt;
+&lt;h3 id=&#34;整体算法思路&#34;&gt;整体算法思路：
+&lt;/h3&gt;&lt;p&gt;采用回溯算法，遍历循环数组，形成路径，每一层中循环的都是数组的所有元素，为了不使元素重复，加入额外的存储空间存储判断。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202311131750211.png&#34;
 	
 	
@@ -313,8 +313,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;题解&#34;&gt;题解：&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;题解&#34;&gt;题解：
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -390,8 +390,8 @@
         <pubDate>Mon, 25 Sep 2023 10:52:14 +0800</pubDate>
         
         <guid>http://localhost:1313/p/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E8%A7%A3%E6%B3%95/</guid>
-        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post 斐波那契数列解法" /&gt;&lt;h3 id=&#34;斐波那契数列定义&#34;&gt;斐波那契数列定义：&lt;/h3&gt;
-&lt;blockquote&gt;
+        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post 斐波那契数列解法" /&gt;&lt;h3 id=&#34;斐波那契数列定义&#34;&gt;斐波那契数列定义：
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;引用自维基百科：&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;斐波那契数&lt;/strong&gt;（&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/wiki/%e6%84%8f%e5%a4%a7%e5%88%a9%e8%af%ad&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -446,8 +446,8 @@
 &gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;用文字来说，就是斐波那契数列由0和1开始，之后的斐波那契数就是由之前的两数相加而得出。&lt;/p&gt;
-&lt;h3 id=&#34;递归解法1&#34;&gt;递归解法1：&lt;/h3&gt;
-&lt;p&gt;根据其数学定义，采用递归方式，直译成代码：&lt;/p&gt;
+&lt;h3 id=&#34;递归解法1&#34;&gt;递归解法1：
+&lt;/h3&gt;&lt;p&gt;根据其数学定义，采用递归方式，直译成代码：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -463,8 +463,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;此种方式简单明了，但运行起来会发现，随着n的增大，其耗时也随着增大变慢。其中原因在于会重复计算，如n=40时，第一次递归时计算f(39)和f(38)，第二次递归时计算f(38),f(37)以及f(37)和f(36)。为了加快效率，我们可以加入个临时存储空间，将计算过的结果存放与此。&lt;/p&gt;
-&lt;h3 id=&#34;递归临时存储&#34;&gt;递归临时存储：&lt;/h3&gt;
-&lt;p&gt;运用数组存放已计算过的结果，数组长度为n+1;&lt;/p&gt;
+&lt;h3 id=&#34;递归临时存储&#34;&gt;递归临时存储：
+&lt;/h3&gt;&lt;p&gt;运用数组存放已计算过的结果，数组长度为n+1;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -485,8 +485,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;动态规划解法&#34;&gt;动态规划解法：&lt;/h3&gt;
-&lt;p&gt;以上解法都是利用递归，从上往下进行，采用动态规划，由下往上进行计算。辅助数组&lt;code&gt;dptable&lt;/code&gt;用于存储计算过程中产生的结果。&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;动态规划解法&#34;&gt;动态规划解法：
+&lt;/h3&gt;&lt;p&gt;以上解法都是利用递归，从上往下进行，采用动态规划，由下往上进行计算。辅助数组&lt;code&gt;dptable&lt;/code&gt;用于存储计算过程中产生的结果。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -511,8 +511,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;动态规划解法-优化&#34;&gt;动态规划解法-优化：&lt;/h3&gt;
-&lt;p&gt;上面的都是通过创建n+1个元素数组，作为临时结果存储。空间复杂度为O(N),那还有没有可能优化一下。当然是可以的，我们可以找出规律，发现有用的都是前两个结果元素，可以只用两个变量存储即可，这样能将空间复杂度降为O(1)。&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;动态规划解法-优化&#34;&gt;动态规划解法-优化：
+&lt;/h3&gt;&lt;p&gt;上面的都是通过创建n+1个元素数组，作为临时结果存储。空间复杂度为O(N),那还有没有可能优化一下。当然是可以的，我们可以找出规律，发现有用的都是前两个结果元素，可以只用两个变量存储即可，这样能将空间复杂度降为O(1)。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1

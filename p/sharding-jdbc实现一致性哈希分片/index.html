@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='http://localhost:1313/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E5%88%86%E7%89%87/'>
 
-<link rel="stylesheet" href="/scss/style.min.c6b767b9eb9f309b3f7894cc7606640615b31b2f961a807fafa564a6c97ece24.css"><meta property='og:title' content="sharding-jdbc实现一致性哈希分片">
+<link rel="stylesheet" href="/scss/style.min.d2f78c050d4403894c816f76b3019538f3efed9edad5eb96bf29b6b27b04d65b.css"><meta property='og:title' content="sharding-jdbc实现一致性哈希分片">
 <meta property='og:description' content="之前的sharding-jdbc文章里读写分离水平分片采用了取余的方式，即按照当前实例数简单粗暴区域分片。而取余来说简单易懂，带来的问题也是">
 <meta property='og:url' content='http://localhost:1313/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E5%88%86%E7%89%87/'>
 <meta property='og:site_name' content='码文'>
@@ -86,7 +86,7 @@ if (!doNotTrack) {
             <h1 class="site-name"><a href="/">码文</a></h1>
             <h2 class="site-description">学海本无涯，惟勤是岸</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -359,8 +359,8 @@ if (!doNotTrack) {
     
     <p>之前的sharding-jdbc文章里读写分离水平分片采用了取余的方式，即按照当前实例数简单粗暴区域分片。而取余来说简单易懂，带来的问题也是显而易见的，就是在进行扩容的时候，会导致很多数据的迁移和查询失效。
 一致性哈希算法能够避免以上的问题，其扩容也只会影响一小部分数据，具体的一致性哈希可参考网上很多的博客，这里不再赘述。</p>
-<h4 id="一致性哈希算法定义">一致性哈希算法定义</h4>
-<div class="highlight"><div class="chroma">
+<h4 id="一致性哈希算法定义">一致性哈希算法定义
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -524,8 +524,8 @@ if (!doNotTrack) {
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="配置中设置">配置中设置</h4>
-<p>由于一致性哈希一般针对数据库来设置，所以一致性哈希分片配置只放在数据库上。关键词<code>consistency</code></p>
+</div><h4 id="配置中设置">配置中设置
+</h4><p>由于一致性哈希一般针对数据库来设置，所以一致性哈希分片配置只放在数据库上。关键词<code>consistency</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">  1
@@ -859,7 +859,7 @@ if (!doNotTrack) {
     
     <section class="powerby">
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.24.2">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -948,7 +948,7 @@ if (!doNotTrack) {
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.78371826a48fdc7fba5f4a1ce667a6a4144109771e7ffa600f1638f68911ec79.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

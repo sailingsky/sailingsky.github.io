@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='http://localhost:1313/p/sqlit-jdbc%E4%B8%8Emybatis%E4%BD%BF%E7%94%A8%E9%80%A0%E6%88%90%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E9%94%99%E8%AF%AFbug/'>
 
-<link rel="stylesheet" href="/scss/style.min.c6b767b9eb9f309b3f7894cc7606640615b31b2f961a807fafa564a6c97ece24.css"><meta property='og:title' content="sqlit-jdbc与mybatis使用造成类型转换错误bug">
+<link rel="stylesheet" href="/scss/style.min.d2f78c050d4403894c816f76b3019538f3efed9edad5eb96bf29b6b27b04d65b.css"><meta property='og:title' content="sqlit-jdbc与mybatis使用造成类型转换错误bug">
 <meta property='og:description' content="最近在项目中用到sqlite数据库作为底层数据存储，驱动层顺理成章的采用了sqlite-jdbc+mybatis的组合，但在使用的过程中，偶">
 <meta property='og:url' content='http://localhost:1313/p/sqlit-jdbc%E4%B8%8Emybatis%E4%BD%BF%E7%94%A8%E9%80%A0%E6%88%90%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E9%94%99%E8%AF%AFbug/'>
 <meta property='og:site_name' content='码文'>
@@ -86,7 +86,7 @@ if (!doNotTrack) {
             <h1 class="site-name"><a href="/">码文</a></h1>
             <h2 class="site-description">学海本无涯，惟勤是岸</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -363,8 +363,8 @@ if (!doNotTrack) {
     
     
     <p>最近在项目中用到sqlite数据库作为底层数据存储，驱动层顺理成章的采用了sqlite-jdbc+mybatis的组合，但在使用的过程中，偶现了一个非常奇异的bug.</p>
-<h4 id="复现">复现：</h4>
-<p>相关组件版本：</p>
+<h4 id="复现">复现：
+</h4><p>相关组件版本：</p>
 <ul>
 <li>sqlite-jdbc 3.46.1.0</li>
 <li>mybatis-spring-boot-starter 3.0.3</li>
@@ -425,8 +425,8 @@ if (!doNotTrack) {
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>很明显，第2条记录的id值被改变了，bug就这样产生了。</p>
-<h4 id="根源">根源</h4>
-<p>追踪整个代码执行逻辑，关键链路如下：</p>
+<h4 id="根源">根源
+</h4><p>追踪整个代码执行逻辑，关键链路如下：</p>
 <p>DefaultResultSetHandler.java#createAutomaticMappings &mdash;&gt;ResultSetWrapper.java#getTypeHandler</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -534,8 +534,8 @@ if (!doNotTrack) {
 	
 	
 ></p>
-<h4 id="解决方案">解决方案：</h4>
-<p>针对这个问题，我向sqlite-jdbc和mybatis都提了个issue,https://github.com/xerial/sqlite-jdbc/issues/1177 和 <a class="link" href="https://github.com/mybatis/mybatis-3/issues/3242"  target="_blank" rel="noopener"
+<h4 id="解决方案">解决方案：
+</h4><p>针对这个问题，我向sqlite-jdbc和mybatis都提了个issue,https://github.com/xerial/sqlite-jdbc/issues/1177 和 <a class="link" href="https://github.com/mybatis/mybatis-3/issues/3242"  target="_blank" rel="noopener"
     >https://github.com/mybatis/mybatis-3/issues/3242</a>。最后得出的结论：在sqlite中，最好在mapper中resultType使用具体的pojo类型，而不是使用<code>java.util.map</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -655,7 +655,7 @@ if (!doNotTrack) {
     
     <section class="powerby">
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.24.2">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -744,7 +744,7 @@ if (!doNotTrack) {
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.78371826a48fdc7fba5f4a1ce667a6a4144109771e7ffa600f1638f68911ec79.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

@@ -6,15 +6,142 @@
         <description>Recent content in Posts on 码文</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 29 Dec 2024 11:24:38 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 31 Mar 2025 20:00:24 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Mysql8解压包安装</title>
+        <link>http://localhost:1313/p/mysql8%E8%A7%A3%E5%8E%8B%E5%8C%85%E5%AE%89%E8%A3%85/</link>
+        <pubDate>Mon, 31 Mar 2025 20:00:24 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/mysql8%E8%A7%A3%E5%8E%8B%E5%8C%85%E5%AE%89%E8%A3%85/</guid>
+        <description>&lt;img src="http://localhost:1313/p/mysql8%E8%A7%A3%E5%8E%8B%E5%8C%85%E5%AE%89%E8%A3%85/sunset.jpg" alt="Featured image of post Mysql8解压包安装" /&gt;&lt;p&gt;最近需要装下mysql8，简单做个记录备份下安装，以便以后。&lt;/p&gt;
+&lt;h4 id=&#34;下载压缩安装包&#34;&gt;下载压缩安装包：
+&lt;/h4&gt;&lt;p&gt;先去https://dev.mysql.com/downloads/mysql/ 下载对应版本，我选择的是8.4.4，选择zip&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202503312007533.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250331200735321&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;解压配置&#34;&gt;解压配置：
+&lt;/h4&gt;&lt;p&gt;解压到目标目录，然后在D:\dev\mysql-8.4.4-winx64 根目录下新建mysql的配置文件my.ini&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[mysqld]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 设置3309端口&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;3309&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 设置mysql的安装目录，记得切换成自己的路径&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;basedir&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;D:\\dev\\mysql-8.4.4-winx64&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 设置mysql数据库的数据的存放目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;datadir&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;D:\\dev\\mysql-8.4.4-winx64\\data&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 允许最大连接数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;max_connections&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;200&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 允许连接失败的次数。这是为了防止有人从该主机试图攻击数据库系统&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;max_connect_errors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 服务端使用的字符集默认为UTF8&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;character-set-server&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;utf8&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 创建新表时将使用的默认存储引擎&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;default-storage-engine&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;INNODB&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 默认使用“mysql_native_password”插件认证&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;mysql_native_password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;ON&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[mysql]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 设置mysql客户端默认字符集&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;default-character-set&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;utf8&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[client]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 设置mysql客户端连接服务端时默认使用的端口&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;3309&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;default-character-set&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;utf8&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;打开命令行，运行以下命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#安装mysql8服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mysqld --install mysql8
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#初始化(注意此后输出中会生成root的默认密码)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mysqld --initialize --user&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;root --console
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#启动mysql8服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;net start mysql8
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#进入mysql&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mysql -uroot -p
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#修改root密码&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ALTER USER &lt;span class=&#34;s1&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span class=&#34;s1&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; IDENTIFIED WITH mysql_native_password by &lt;span class=&#34;s1&#34;&gt;&amp;#39;password&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202503312026042.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250331202627755&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;结束~&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>sqlit-jdbc与mybatis使用造成类型转换错误bug</title>
         <link>http://localhost:1313/p/sqlit-jdbc%E4%B8%8Emybatis%E4%BD%BF%E7%94%A8%E9%80%A0%E6%88%90%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E9%94%99%E8%AF%AFbug/</link>
         <pubDate>Sun, 29 Dec 2024 11:24:38 +0800</pubDate>
         
         <guid>http://localhost:1313/p/sqlit-jdbc%E4%B8%8Emybatis%E4%BD%BF%E7%94%A8%E9%80%A0%E6%88%90%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E9%94%99%E8%AF%AFbug/</guid>
         <description>&lt;img src="http://localhost:1313/p/sqlit-jdbc%E4%B8%8Emybatis%E4%BD%BF%E7%94%A8%E9%80%A0%E6%88%90%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E9%94%99%E8%AF%AFbug/hari-nandakumar-hh9OkRFj-Pw-unsplash.jpg" alt="Featured image of post sqlit-jdbc与mybatis使用造成类型转换错误bug" /&gt;&lt;p&gt;最近在项目中用到sqlite数据库作为底层数据存储，驱动层顺理成章的采用了sqlite-jdbc+mybatis的组合，但在使用的过程中，偶现了一个非常奇异的bug.&lt;/p&gt;
-&lt;h4 id=&#34;复现&#34;&gt;复现：&lt;/h4&gt;
-&lt;p&gt;相关组件版本：&lt;/p&gt;
+&lt;h4 id=&#34;复现&#34;&gt;复现：
+&lt;/h4&gt;&lt;p&gt;相关组件版本：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;sqlite-jdbc 3.46.1.0&lt;/li&gt;
 &lt;li&gt;mybatis-spring-boot-starter 3.0.3&lt;/li&gt;
@@ -75,8 +202,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;很明显，第2条记录的id值被改变了，bug就这样产生了。&lt;/p&gt;
-&lt;h4 id=&#34;根源&#34;&gt;根源&lt;/h4&gt;
-&lt;p&gt;追踪整个代码执行逻辑，关键链路如下：&lt;/p&gt;
+&lt;h4 id=&#34;根源&#34;&gt;根源
+&lt;/h4&gt;&lt;p&gt;追踪整个代码执行逻辑，关键链路如下：&lt;/p&gt;
 &lt;p&gt;DefaultResultSetHandler.java#createAutomaticMappings &amp;mdash;&amp;gt;ResultSetWrapper.java#getTypeHandler&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -184,8 +311,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;解决方案&#34;&gt;解决方案：&lt;/h4&gt;
-&lt;p&gt;针对这个问题，我向sqlite-jdbc和mybatis都提了个issue,https://github.com/xerial/sqlite-jdbc/issues/1177 和 &lt;a class=&#34;link&#34; href=&#34;https://github.com/mybatis/mybatis-3/issues/3242&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h4 id=&#34;解决方案&#34;&gt;解决方案：
+&lt;/h4&gt;&lt;p&gt;针对这个问题，我向sqlite-jdbc和mybatis都提了个issue,https://github.com/xerial/sqlite-jdbc/issues/1177 和 &lt;a class=&#34;link&#34; href=&#34;https://github.com/mybatis/mybatis-3/issues/3242&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/mybatis/mybatis-3/issues/3242&lt;/a&gt;。最后得出的结论：在sqlite中，最好在mapper中resultType使用具体的pojo类型，而不是使用&lt;code&gt;java.util.map&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -218,8 +345,8 @@
         
         <guid>http://localhost:1313/p/threadpoolexecutor%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%BD%93%E7%9A%84bug/</guid>
         <description>&lt;img src="http://localhost:1313/p/threadpoolexecutor%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%BD%93%E7%9A%84bug/neom-LAj90eAXOZA-unsplash.jpg" alt="Featured image of post Threadpoolexecutor使用不当的bug" /&gt;&lt;p&gt;ThreadPoolExecutor这个应该很多人都用过，主要用来多线程任务并行执行。当然如果用不好，也会有很多意想不到的坑，比如常见的队列用错导致堆溢出。今天说的不是这个问题，这是之前线上遇到的问题。&lt;/p&gt;
-&lt;h4 id=&#34;代码&#34;&gt;代码&lt;/h4&gt;
-&lt;p&gt;线程业务任务：&lt;/p&gt;
+&lt;h4 id=&#34;代码&#34;&gt;代码
+&lt;/h4&gt;&lt;p&gt;线程业务任务：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -276,8 +403,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这个代码咋看起来，也没有什么问题吧。线程池大小，阻塞队列也用的有界队列，线程池最后也进行了关闭处理。然而，实际情况却是线程池不会关闭，因为代码根本不会执行到关闭那行。这样当代码不断执行，创建的线程池越来越多，线程池却没被关闭，最终拖垮系统。&lt;/p&gt;
-&lt;h4 id=&#34;原因&#34;&gt;原因&lt;/h4&gt;
-&lt;p&gt;我们一步步来梳理下：&lt;/p&gt;
+&lt;h4 id=&#34;原因&#34;&gt;原因
+&lt;/h4&gt;&lt;p&gt;我们一步步来梳理下：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;来了30个线程任务，扔到了线程池里&lt;/li&gt;
 &lt;li&gt;核心线程数5，那么先创建5个线程执行任务，还剩25个任务&lt;/li&gt;
@@ -329,8 +456,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;很明显，抛出异常后，后面的代码执行就被中断了，&lt;code&gt;threadPoolExecutor.shutdown()&lt;/code&gt; 这个也就不会被执行了。&lt;/p&gt;
-&lt;h4 id=&#34;优化&#34;&gt;优化&lt;/h4&gt;
-&lt;ol&gt;
+&lt;h4 id=&#34;优化&#34;&gt;优化
+&lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;将代码用try-catch包起来，像这样：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -406,8 +533,8 @@
         <guid>http://localhost:1313/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C%E5%88%86%E7%89%87/</guid>
         <description>&lt;img src="http://localhost:1313/post/java/sharding-jdbc/pexels-google-deepmind-17483874.jpg" alt="Featured image of post sharding-jdbc实现一致性哈希分片" /&gt;&lt;p&gt;之前的sharding-jdbc文章里读写分离水平分片采用了取余的方式，即按照当前实例数简单粗暴区域分片。而取余来说简单易懂，带来的问题也是显而易见的，就是在进行扩容的时候，会导致很多数据的迁移和查询失效。
 一致性哈希算法能够避免以上的问题，其扩容也只会影响一小部分数据，具体的一致性哈希可参考网上很多的博客，这里不再赘述。&lt;/p&gt;
-&lt;h4 id=&#34;一致性哈希算法定义&#34;&gt;一致性哈希算法定义&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h4 id=&#34;一致性哈希算法定义&#34;&gt;一致性哈希算法定义
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -571,8 +698,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;配置中设置&#34;&gt;配置中设置&lt;/h4&gt;
-&lt;p&gt;由于一致性哈希一般针对数据库来设置，所以一致性哈希分片配置只放在数据库上。关键词&lt;code&gt;consistency&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;h4 id=&#34;配置中设置&#34;&gt;配置中设置
+&lt;/h4&gt;&lt;p&gt;由于一致性哈希一般针对数据库来设置，所以一致性哈希分片配置只放在数据库上。关键词&lt;code&gt;consistency&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;  1
@@ -790,8 +917,8 @@
         <pubDate>Mon, 11 Mar 2024 21:56:55 +0800</pubDate>
         
         <guid>http://localhost:1313/p/leetcode-746-%E6%9C%80%E5%B0%8F%E4%BB%A3%E4%BB%B7%E7%88%AC%E6%A5%BC%E6%A2%AF/</guid>
-        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post Leetcode-746 最小代价爬楼梯" /&gt;&lt;h4 id=&#34;题目描述&#34;&gt;题目描述&lt;/h4&gt;
-&lt;p&gt;给你一个整数数组 &lt;code&gt;cost&lt;/code&gt; ，其中 &lt;code&gt;cost[i]&lt;/code&gt; 是从楼梯第 &lt;code&gt;i&lt;/code&gt; 个台阶向上爬需要支付的费用。一旦你支付此费用，即可选择向上爬一个或者两个台阶。&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post Leetcode-746 最小代价爬楼梯" /&gt;&lt;h4 id=&#34;题目描述&#34;&gt;题目描述
+&lt;/h4&gt;&lt;p&gt;给你一个整数数组 &lt;code&gt;cost&lt;/code&gt; ，其中 &lt;code&gt;cost[i]&lt;/code&gt; 是从楼梯第 &lt;code&gt;i&lt;/code&gt; 个台阶向上爬需要支付的费用。一旦你支付此费用，即可选择向上爬一个或者两个台阶。&lt;/p&gt;
 &lt;p&gt;你可以选择从下标为 &lt;code&gt;0&lt;/code&gt; 或下标为 &lt;code&gt;1&lt;/code&gt; 的台阶开始爬楼梯。&lt;/p&gt;
 &lt;p&gt;请你计算并返回达到楼梯顶部的最低花费。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
@@ -811,10 +938,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;总花费为 15 。
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;解题思路&#34;&gt;解题思路&lt;/h4&gt;
-&lt;p&gt;和之前&lt;code&gt;leetcode-70 爬楼梯&lt;/code&gt;类似，第i个阶梯的最小代价公式为:d(i)=min(d(i-1),d(i-2))+c(i)&lt;/p&gt;
-&lt;h4 id=&#34;代码&#34;&gt;代码&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;解题思路&#34;&gt;解题思路
+&lt;/h4&gt;&lt;p&gt;和之前&lt;code&gt;leetcode-70 爬楼梯&lt;/code&gt;类似，第i个阶梯的最小代价公式为:d(i)=min(d(i-1),d(i-2))+c(i)&lt;/p&gt;
+&lt;h4 id=&#34;代码&#34;&gt;代码
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -862,8 +989,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;效果&#34;&gt;效果&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202403112204724.png&#34;
+&lt;/div&gt;&lt;h4 id=&#34;效果&#34;&gt;效果
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202403112204724.png&#34;
 	
 	
 	
@@ -881,8 +1008,8 @@
         <pubDate>Mon, 11 Mar 2024 21:39:57 +0800</pubDate>
         
         <guid>http://localhost:1313/p/leetcode-70-%E7%88%AC%E6%A5%BC%E6%A2%AF/</guid>
-        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post Leetcode-70 爬楼梯" /&gt;&lt;h4 id=&#34;题目描述&#34;&gt;题目描述&lt;/h4&gt;
-&lt;p&gt;假设你正在爬楼梯。需要 &lt;code&gt;n&lt;/code&gt; 阶你才能到达楼顶。&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post Leetcode-70 爬楼梯" /&gt;&lt;h4 id=&#34;题目描述&#34;&gt;题目描述
+&lt;/h4&gt;&lt;p&gt;假设你正在爬楼梯。需要 &lt;code&gt;n&lt;/code&gt; 阶你才能到达楼顶。&lt;/p&gt;
 &lt;p&gt;每次你可以爬 &lt;code&gt;1&lt;/code&gt; 或 &lt;code&gt;2&lt;/code&gt; 个台阶。你有多少种不同的方法可以爬到楼顶呢？&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -901,13 +1028,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. 2 阶
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;解题思路&#34;&gt;解题思路&lt;/h4&gt;
-&lt;p&gt;当n=1, 有1种（1阶）方法，即f(1)=1;&lt;/p&gt;
+&lt;/div&gt;&lt;h4 id=&#34;解题思路&#34;&gt;解题思路
+&lt;/h4&gt;&lt;p&gt;当n=1, 有1种（1阶）方法，即f(1)=1;&lt;/p&gt;
 &lt;p&gt;当n=2, 有2种（1 阶 + 1 阶;2阶）方法，即f(2)=2;&lt;/p&gt;
 &lt;p&gt;当n=3, 有3种(1 阶 + 1 阶+1阶;2阶+1阶；1阶+2阶)方法，即f(3)=3=f(2)+f(1);&lt;/p&gt;
 &lt;p&gt;利用数学归纳法，可得f(n)=f(n-1)+f(n-2),典型的斐波那契数列;&lt;/p&gt;
-&lt;h4 id=&#34;代码&#34;&gt;代码&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h4 id=&#34;代码&#34;&gt;代码
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -933,8 +1060,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;效果&#34;&gt;效果&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202403112151065.png&#34;
+&lt;/div&gt;&lt;h4 id=&#34;效果&#34;&gt;效果
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202403112151065.png&#34;
 	
 	
 	
@@ -952,8 +1079,8 @@
         <pubDate>Mon, 11 Mar 2024 21:25:08 +0800</pubDate>
         
         <guid>http://localhost:1313/p/leetcode-105-%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
-        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post Leetcode-105 从前序与中序遍历序列构造二叉树" /&gt;&lt;h4 id=&#34;题目描述&#34;&gt;题目描述&lt;/h4&gt;
-&lt;p&gt;给定两个整数数组 &lt;code&gt;preorder&lt;/code&gt; 和 &lt;code&gt;inorder&lt;/code&gt; ，其中 &lt;code&gt;preorder&lt;/code&gt; 是二叉树的&lt;strong&gt;先序遍历&lt;/strong&gt;， &lt;code&gt;inorder&lt;/code&gt; 是同一棵树的&lt;strong&gt;中序遍历&lt;/strong&gt;，请构造二叉树并返回其根节点。&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post Leetcode-105 从前序与中序遍历序列构造二叉树" /&gt;&lt;h4 id=&#34;题目描述&#34;&gt;题目描述
+&lt;/h4&gt;&lt;p&gt;给定两个整数数组 &lt;code&gt;preorder&lt;/code&gt; 和 &lt;code&gt;inorder&lt;/code&gt; ，其中 &lt;code&gt;preorder&lt;/code&gt; 是二叉树的&lt;strong&gt;先序遍历&lt;/strong&gt;， &lt;code&gt;inorder&lt;/code&gt; 是同一棵树的&lt;strong&gt;中序遍历&lt;/strong&gt;，请构造二叉树并返回其根节点。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://assets.leetcode.com/uploads/2021/02/19/tree.jpg&#34;
 	
@@ -975,13 +1102,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;输出: [3,9,20,null,null,15,7]
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;解题思路&#34;&gt;解题思路&lt;/h4&gt;
-&lt;ul&gt;
+&lt;/div&gt;&lt;h4 id=&#34;解题思路&#34;&gt;解题思路
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;利用规则，前序数组规则是：根-左-右 ，中序数组规则是：左-根-右&lt;/li&gt;
 &lt;li&gt;以前序数组为主，确定好左子树的长度（而左子树的长度，可以从中序数组中根左边数字长度获得），接着就能分别对左右子树进行递归构造。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;代码&#34;&gt;代码&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h4 id=&#34;代码&#34;&gt;代码
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -1049,8 +1176,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;效果&#34;&gt;效果：&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202403112136460.png&#34;
+&lt;/div&gt;&lt;h4 id=&#34;效果&#34;&gt;效果：
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202403112136460.png&#34;
 	
 	
 	
@@ -1069,8 +1196,8 @@
         
         <guid>http://localhost:1313/p/whisper%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97/</guid>
         <description>&lt;img src="http://localhost:1313/post/ai/igor-omilaev-eGGFZ5X2LnA-unsplash.jpg" alt="Featured image of post Whisper语音转文字" /&gt;&lt;p&gt;最近有个需求，想把语音转成文字，网上搜了搜，能用的免费的没多少，某飞的居然要收88大洋，太贵了，买不起根本买不起。后面寻着了个免费的方法，采用whisper进行语音文字转换。&lt;/p&gt;
-&lt;h4 id=&#34;薅个云主机&#34;&gt;薅个云主机&lt;/h4&gt;
-&lt;p&gt;进入google云盘(&lt;a class=&#34;link&#34; href=&#34;https://drive.google.com/drive/home%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h4 id=&#34;薅个云主机&#34;&gt;薅个云主机
+&lt;/h4&gt;&lt;p&gt;进入google云盘(&lt;a class=&#34;link&#34; href=&#34;https://drive.google.com/drive/home%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://drive.google.com/drive/home)&lt;/a&gt;,新建-更多-Google Colaboratory.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202402221552821.png&#34;
 	
@@ -1115,8 +1242,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;安装whisper及配套组件&#34;&gt;安装whisper及配套组件&lt;/h4&gt;
-&lt;ul&gt;
+&lt;h4 id=&#34;安装whisper及配套组件&#34;&gt;安装whisper及配套组件
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;在代码栏中输入以下内容，并运行&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1310,9 +1437,9 @@
         <pubDate>Mon, 15 Jan 2024 15:56:26 +0800</pubDate>
         
         <guid>http://localhost:1313/p/redis%E9%9B%86%E7%BE%A4%E9%AB%98%E5%8F%AF%E7%94%A8/</guid>
-        <description>&lt;img src="http://localhost:1313/p/redis%E9%9B%86%E7%BE%A4%E9%AB%98%E5%8F%AF%E7%94%A8/Logo-redis.svg.png" alt="Featured image of post redis集群高可用" /&gt;&lt;h4 id=&#34;安装&#34;&gt;安装&lt;/h4&gt;
-&lt;h5 id=&#34;下载源码包编译&#34;&gt;下载源码包&amp;amp;编译&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+        <description>&lt;img src="http://localhost:1313/p/redis%E9%9B%86%E7%BE%A4%E9%AB%98%E5%8F%AF%E7%94%A8/Logo-redis.svg.png" alt="Featured image of post redis集群高可用" /&gt;&lt;h4 id=&#34;安装&#34;&gt;安装
+&lt;/h4&gt;&lt;h5 id=&#34;下载源码包编译&#34;&gt;下载源码包&amp;amp;编译
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -1326,8 +1453,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;修改配置redisconf&#34;&gt;修改配置redis.conf&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;修改配置redisconf&#34;&gt;修改配置redis.conf
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -1337,8 +1464,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;protected-mode no
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;主从模式&#34;&gt;主从模式&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202401151435857.png&#34;
+&lt;/div&gt;&lt;h4 id=&#34;主从模式&#34;&gt;主从模式
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202401151435857.png&#34;
 	
 	
 	
@@ -1348,8 +1475,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h5 id=&#34;主节点&#34;&gt;主节点：&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h5 id=&#34;主节点&#34;&gt;主节点：
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1357,8 +1484,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./src/redis-server /data/redis-master1/redis.conf
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;从节点&#34;&gt;从节点：&lt;/h5&gt;
-&lt;ul&gt;
+&lt;/div&gt;&lt;h5 id=&#34;从节点&#34;&gt;从节点：
+&lt;/h5&gt;&lt;ul&gt;
 &lt;li&gt;修改redis.conf中端口相关及主从复制主节点配置
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1393,8 +1520,8 @@
 	
 &gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id=&#34;验证&#34;&gt;验证&lt;/h5&gt;
-&lt;p&gt;主节点：&lt;/p&gt;
+&lt;h5 id=&#34;验证&#34;&gt;验证
+&lt;/h5&gt;&lt;p&gt;主节点：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1426,8 +1553,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;哨兵模式&#34;&gt;哨兵模式&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202401151507768.png&#34;
+&lt;h4 id=&#34;哨兵模式&#34;&gt;哨兵模式
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202401151507768.png&#34;
 	
 	
 	
@@ -1437,8 +1564,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h5 id=&#34;配置哨兵节点&#34;&gt;配置哨兵节点&lt;/h5&gt;
-&lt;p&gt;配置sentinel.conf文件,其他哨兵也参考该配置进行修改&lt;/p&gt;
+&lt;h5 id=&#34;配置哨兵节点&#34;&gt;配置哨兵节点
+&lt;/h5&gt;&lt;p&gt;配置sentinel.conf文件,其他哨兵也参考该配置进行修改&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -1467,8 +1594,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sentinel failover-timeout mymaster 180000
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;启动哨兵节点&#34;&gt;启动哨兵节点&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;启动哨兵节点&#34;&gt;启动哨兵节点
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1477,8 +1604,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;其余的哨兵节点也类似。&lt;/p&gt;
-&lt;h5 id=&#34;验证-1&#34;&gt;验证&lt;/h5&gt;
-&lt;p&gt;将master 6379 kill掉，在哨兵节点的日志中可查看到选举主节点的信息：
+&lt;h5 id=&#34;验证-1&#34;&gt;验证
+&lt;/h5&gt;&lt;p&gt;将master 6379 kill掉，在哨兵节点的日志中可查看到选举主节点的信息：
 &lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202401151515725.png&#34;
 	
 	
@@ -1489,8 +1616,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;cluster集群模式&#34;&gt;cluster集群模式&lt;/h4&gt;
-&lt;p&gt;Redis Cluster 功能 ： &lt;strong&gt;负载均衡，故障切换&lt;/strong&gt;，&lt;strong&gt;主从复制&lt;/strong&gt; 。&lt;/p&gt;
+&lt;h4 id=&#34;cluster集群模式&#34;&gt;cluster集群模式
+&lt;/h4&gt;&lt;p&gt;Redis Cluster 功能 ： &lt;strong&gt;负载均衡，故障切换&lt;/strong&gt;，&lt;strong&gt;主从复制&lt;/strong&gt; 。&lt;/p&gt;
 &lt;p&gt;配置节点：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1558,8 +1685,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h5 id=&#34;错误异常解决&#34;&gt;错误异常解决&lt;/h5&gt;
-&lt;p&gt;如果在配置集群时，启动出现 &lt;code&gt;[ERR] Node 127.0.0.1:6700 is not empty. Either the node already knows other nodes (check with CLUSTER NODES) or contains some key in database 0.&lt;/code&gt;。这是由于节点中存在以前旧数据导致。&lt;/p&gt;
+&lt;h5 id=&#34;错误异常解决&#34;&gt;错误异常解决
+&lt;/h5&gt;&lt;p&gt;如果在配置集群时，启动出现 &lt;code&gt;[ERR] Node 127.0.0.1:6700 is not empty. Either the node already knows other nodes (check with CLUSTER NODES) or contains some key in database 0.&lt;/code&gt;。这是由于节点中存在以前旧数据导致。&lt;/p&gt;
 &lt;p&gt;解决方式：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;停掉所有节点&lt;/li&gt;
@@ -1576,8 +1703,8 @@
         
         <guid>http://localhost:1313/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB-%E6%B0%B4%E5%B9%B3%E5%88%86%E7%89%87/</guid>
         <description>&lt;img src="http://localhost:1313/post/java/sharding-jdbc/pexels-google-deepmind-17483874.jpg" alt="Featured image of post Sharding Jdbc实现读写分离&#43;水平分片" /&gt;&lt;p&gt;日常系统开发中，经常涉及到大数据量的业务，常见的如商城系统，规模上去后，单表会经常上千万甚至上亿。仅仅靠单表肯定是无法支撑系统的规模及性能，因此诞生了分库分表的解决方案。首先，为了保证高可用，会增加主从库备份；再者为了高性能，会利用主从库进行读写分离；为了高容量，会进行分库分表。&lt;/p&gt;
-&lt;h3 id=&#34;整体架构图&#34;&gt;整体架构图：&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202401092147218.png&#34;
+&lt;h3 id=&#34;整体架构图&#34;&gt;整体架构图：
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202401092147218.png&#34;
 	
 	
 	
@@ -1588,10 +1715,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;master0&lt;/code&gt;和&lt;code&gt;master1&lt;/code&gt;同为写库，用于数据分片，增加数据容量。&lt;code&gt;slave0&lt;/code&gt;和&lt;code&gt;slave1&lt;/code&gt;为从库，提供查询能力，分担查询压力，提升系统性能。同时作为备份库提高可靠性。&lt;/p&gt;
-&lt;h3 id=&#34;mysql高可用集群搭建&#34;&gt;mysql高可用集群搭建&lt;/h3&gt;
-&lt;h4 id=&#34;主mysql搭建&#34;&gt;主mysql搭建&lt;/h4&gt;
-&lt;h5 id=&#34;1docker创建主mysql服务&#34;&gt;1.docker创建主mysql服务&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;mysql高可用集群搭建&#34;&gt;mysql高可用集群搭建
+&lt;/h3&gt;&lt;h4 id=&#34;主mysql搭建&#34;&gt;主mysql搭建
+&lt;/h4&gt;&lt;h5 id=&#34;1docker创建主mysql服务&#34;&gt;1.docker创建主mysql服务
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -1611,8 +1738,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;mysql:8.0.29
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;2修改主mysql配置文件&#34;&gt;2.修改主mysql配置文件&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;2修改主mysql配置文件&#34;&gt;2.修改主mysql配置文件
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1672,8 +1799,8 @@
 &lt;p&gt;binlog_format=MIXED：是以上两种level的混合使用，有函数用ROW，没函数用STATEMENT，但是无法识别系统变量&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id=&#34;3进入mysql主服务器修改登录限制&#34;&gt;3.进入mysql主服务器，修改登录限制&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h5 id=&#34;3进入mysql主服务器修改登录限制&#34;&gt;3.进入mysql主服务器，修改登录限制
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -1691,8 +1818,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ALTER USER &lt;span class=&#34;s1&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span class=&#34;s1&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; IDENTIFIED WITH mysql_native_password BY &lt;span class=&#34;s1&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;4-创建数据复制所用的slave用户&#34;&gt;4. 创建数据复制所用的slave用户&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;4-创建数据复制所用的slave用户&#34;&gt;4. 创建数据复制所用的slave用户
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -1712,8 +1839,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FLUSH PRIVILEGES&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;5-查看主mysql状态&#34;&gt;5. 查看主mysql状态&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;5-查看主mysql状态&#34;&gt;5. 查看主mysql状态
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1731,9 +1858,9 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;从服务器搭建&#34;&gt;从服务器搭建&lt;/h4&gt;
-&lt;h5 id=&#34;1docker创建启动从服务器&#34;&gt;1.docker创建启动从服务器&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h4 id=&#34;从服务器搭建&#34;&gt;从服务器搭建
+&lt;/h4&gt;&lt;h5 id=&#34;1docker创建启动从服务器&#34;&gt;1.docker创建启动从服务器
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -1753,8 +1880,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;mysql:8.0.29
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;2-修改从服务器配置&#34;&gt;2. 修改从服务器配置&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;2-修改从服务器配置&#34;&gt;2. 修改从服务器配置
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1788,8 +1915,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker restart mysql-slave1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;3-修改登录方式&#34;&gt;3. 修改登录方式&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;3-修改登录方式&#34;&gt;3. 修改登录方式
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -1807,8 +1934,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ALTER USER &lt;span class=&#34;s1&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;@&lt;span class=&#34;s1&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; IDENTIFIED WITH mysql_native_password BY &lt;span class=&#34;s1&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h5 id=&#34;4-配置主从关系&#34;&gt;4. 配置主从关系&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h5 id=&#34;4-配置主从关系&#34;&gt;4. 配置主从关系
+&lt;/h5&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -1820,8 +1947,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MASTER_LOG_FILE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;binlog.000003&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MASTER_LOG_POS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1333&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;slave启动主从同步&#34;&gt;slave启动主从同步&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;slave启动主从同步&#34;&gt;slave启动主从同步
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -1833,8 +1960,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SHOW SLAVE STATUS&lt;span class=&#34;se&#34;&gt;\G&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;springboot配置&#34;&gt;SpringBoot配置&lt;/h3&gt;
-&lt;p&gt;pom.xml加入&lt;code&gt;sharding-jdbc&lt;/code&gt;,&lt;code&gt;mybatis-plus&lt;/code&gt;,&lt;code&gt;mysql驱动&lt;/code&gt;等依赖&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;springboot配置&#34;&gt;SpringBoot配置
+&lt;/h3&gt;&lt;p&gt;pom.xml加入&lt;code&gt;sharding-jdbc&lt;/code&gt;,&lt;code&gt;mybatis-plus&lt;/code&gt;,&lt;code&gt;mysql驱动&lt;/code&gt;等依赖&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -2339,8 +2466,8 @@
         <pubDate>Wed, 22 Nov 2023 16:45:23 +0800</pubDate>
         
         <guid>http://localhost:1313/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/</guid>
-        <description>&lt;img src="http://localhost:1313/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/chris-rosiak-YSwcI_rmCYo-unsplash.jpg" alt="Featured image of post Spring cloud gateway转发websocket请求" /&gt;&lt;h3 id=&#34;websocket相关配置&#34;&gt;websocket相关配置：&lt;/h3&gt;
-&lt;p&gt;新建了个websocket-server模块微服务。&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/p/spring-cloud-gateway%E8%BD%AC%E5%8F%91websocket%E8%AF%B7%E6%B1%82/chris-rosiak-YSwcI_rmCYo-unsplash.jpg" alt="Featured image of post Spring cloud gateway转发websocket请求" /&gt;&lt;h3 id=&#34;websocket相关配置&#34;&gt;websocket相关配置：
+&lt;/h3&gt;&lt;p&gt;新建了个websocket-server模块微服务。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;引入websocket依赖：&lt;/li&gt;
 &lt;/ul&gt;
@@ -2548,8 +2675,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;gateway配置&#34;&gt;gateway配置：&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;gateway配置&#34;&gt;gateway配置：
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;application.yml加入路由配置：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2580,10 +2707,10 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;趟坑排雷&#34;&gt;趟坑排雷：&lt;/h3&gt;
-&lt;p&gt;当你觉得万无一失，启动相关服务进行调试请求的时候，问题就来了：&lt;/p&gt;
-&lt;h4 id=&#34;ioundertowserverhttpserverexchange-cannot-be-cast-to-reactornettyhttpserverhttpserverresponse-异常&#34;&gt;io.undertow.server.HttpServerExchange cannot be cast to reactor.netty.http.server.HttpServerResponse 异常&lt;/h4&gt;
-&lt;p&gt;完整异常堆栈信息如下：&lt;/p&gt;
+&lt;h3 id=&#34;趟坑排雷&#34;&gt;趟坑排雷：
+&lt;/h3&gt;&lt;p&gt;当你觉得万无一失，启动相关服务进行调试请求的时候，问题就来了：&lt;/p&gt;
+&lt;h4 id=&#34;ioundertowserverhttpserverexchange-cannot-be-cast-to-reactornettyhttpserverhttpserverresponse-异常&#34;&gt;io.undertow.server.HttpServerExchange cannot be cast to reactor.netty.http.server.HttpServerResponse 异常
+&lt;/h4&gt;&lt;p&gt;完整异常堆栈信息如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -2833,8 +2960,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;nacos负载均衡&#34;&gt;nacos负载均衡&lt;/h4&gt;
-&lt;p&gt;在仔细看看之前的gateway配置，是没进行负载均衡配置的，直接固定转给某个websocket服务。环境上是需要负载均衡配置的，因此改个配置试试。&lt;/p&gt;
+&lt;h4 id=&#34;nacos负载均衡&#34;&gt;nacos负载均衡
+&lt;/h4&gt;&lt;p&gt;在仔细看看之前的gateway配置，是没进行负载均衡配置的，直接固定转给某个websocket服务。环境上是需要负载均衡配置的，因此改个配置试试。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -2893,13 +3020,13 @@
         
         <guid>http://localhost:1313/p/idea%E6%9E%84%E5%BB%BA%E6%89%93%E5%8C%85%E4%B8%8A%E4%BC%A0docker%E9%95%9C%E5%83%8F/</guid>
         <description>&lt;img src="http://localhost:1313/p/idea%E6%9E%84%E5%BB%BA%E6%89%93%E5%8C%85%E4%B8%8A%E4%BC%A0docker%E9%95%9C%E5%83%8F/5-maniere-deplacer-conteneur-docker-vers-autre-machine.jpeg" alt="Featured image of post Idea构建打包上传Docker镜像" /&gt;&lt;p&gt;目前很多应用开发部署都是基于Docker容器化，为了简化本地开发测试，可以在idea中进行相关配置，即可实现本地打包部署高效率。&lt;/p&gt;
-&lt;h2 id=&#34;前置条件&#34;&gt;前置条件&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;前置条件&#34;&gt;前置条件
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;装有Docker的服务器&lt;/li&gt;
 &lt;li&gt;Idea&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;docker服务器配置&#34;&gt;Docker服务器配置&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;docker服务器配置&#34;&gt;Docker服务器配置
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;修改&lt;code&gt;/usr/lib/systemd/system/docker.service&lt;/code&gt;配置：&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2953,8 +3080,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;idea配置&#34;&gt;idea配置:&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;idea配置&#34;&gt;idea配置:
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;settings-&amp;gt;Build-&amp;gt;Docker&lt;/code&gt;新增docker配置，输入docker服务所在ip及之前配置的端口&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202305022112836.png&#34;
@@ -2982,8 +3109,8 @@
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;建立示例工程测试&#34;&gt;建立示例工程测试：&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;建立示例工程测试&#34;&gt;建立示例工程测试：
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;idea中建个springboot工程，此步骤简单略过。&lt;/p&gt;
 &lt;/li&gt;
@@ -3121,8 +3248,8 @@
         <pubDate>Mon, 13 Nov 2023 17:30:56 +0800</pubDate>
         
         <guid>http://localhost:1313/p/%E5%85%A8%E6%8E%92%E5%88%97/</guid>
-        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post 全排列" /&gt;&lt;h3 id=&#34;题目定义&#34;&gt;题目定义：&lt;/h3&gt;
-&lt;p&gt;给定一个不含重复数字的数组 nums ，返回其 所有可能的全排列 。你可以 按任意顺序 返回答案。&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post 全排列" /&gt;&lt;h3 id=&#34;题目定义&#34;&gt;题目定义：
+&lt;/h3&gt;&lt;p&gt;给定一个不含重复数字的数组 nums ，返回其 所有可能的全排列 。你可以 按任意顺序 返回答案。&lt;/p&gt;
 &lt;p&gt;示例 1：&lt;/p&gt;
 &lt;p&gt;输入：nums = [1,2,3]
 输出：[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
@@ -3132,8 +3259,8 @@
 示例 3：&lt;/p&gt;
 &lt;p&gt;输入：nums = [1]
 输出：[[1]]&lt;/p&gt;
-&lt;h3 id=&#34;整体算法思路&#34;&gt;整体算法思路：&lt;/h3&gt;
-&lt;p&gt;采用回溯算法，遍历循环数组，形成路径，每一层中循环的都是数组的所有元素，为了不使元素重复，加入额外的存储空间存储判断。&lt;/p&gt;
+&lt;h3 id=&#34;整体算法思路&#34;&gt;整体算法思路：
+&lt;/h3&gt;&lt;p&gt;采用回溯算法，遍历循环数组，形成路径，每一层中循环的都是数组的所有元素，为了不使元素重复，加入额外的存储空间存储判断。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202311131750211.png&#34;
 	
 	
@@ -3144,8 +3271,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;题解&#34;&gt;题解：&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;题解&#34;&gt;题解：
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -3221,10 +3348,10 @@
         <pubDate>Thu, 09 Nov 2023 11:06:11 +0800</pubDate>
         
         <guid>http://localhost:1313/p/spring-boot-%E8%B0%83%E7%94%A8grpc/</guid>
-        <description>&lt;img src="http://localhost:1313/p/spring-boot-%E8%B0%83%E7%94%A8grpc/steve-busch-b_nBSjoGtrU-unsplash.jpg" alt="Featured image of post Spring boot 调用Grpc" /&gt;&lt;h3 id=&#34;起因&#34;&gt;起因&lt;/h3&gt;
-&lt;p&gt;最近因工作需要，需要调用grpc服务的一个接口，以前也没接触过，接口提供方呢就扔了个proto文件过来，没法，在网上到处翻翻找找，说的都比较杂乱，缺少部分细节，就简单写个文章记录下吧。&lt;/p&gt;
-&lt;h3 id=&#34;具体细节&#34;&gt;具体细节&lt;/h3&gt;
-&lt;ul&gt;
+        <description>&lt;img src="http://localhost:1313/p/spring-boot-%E8%B0%83%E7%94%A8grpc/steve-busch-b_nBSjoGtrU-unsplash.jpg" alt="Featured image of post Spring boot 调用Grpc" /&gt;&lt;h3 id=&#34;起因&#34;&gt;起因
+&lt;/h3&gt;&lt;p&gt;最近因工作需要，需要调用grpc服务的一个接口，以前也没接触过，接口提供方呢就扔了个proto文件过来，没法，在网上到处翻翻找找，说的都比较杂乱，缺少部分细节，就简单写个文章记录下吧。&lt;/p&gt;
+&lt;h3 id=&#34;具体细节&#34;&gt;具体细节
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;引入proto文件
 在工程&lt;code&gt;\src\main&lt;/code&gt;目录下新建proto目录，将服务提供方提供的proto文件放入该目录。&lt;/p&gt;
@@ -3422,8 +3549,8 @@
         <pubDate>Mon, 25 Sep 2023 10:52:14 +0800</pubDate>
         
         <guid>http://localhost:1313/p/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E8%A7%A3%E6%B3%95/</guid>
-        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post 斐波那契数列解法" /&gt;&lt;h3 id=&#34;斐波那契数列定义&#34;&gt;斐波那契数列定义：&lt;/h3&gt;
-&lt;blockquote&gt;
+        <description>&lt;img src="http://localhost:1313/post/algorithm/pexels-google-deepmind-18069816.jpg" alt="Featured image of post 斐波那契数列解法" /&gt;&lt;h3 id=&#34;斐波那契数列定义&#34;&gt;斐波那契数列定义：
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;引用自维基百科：&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;斐波那契数&lt;/strong&gt;（&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/wiki/%e6%84%8f%e5%a4%a7%e5%88%a9%e8%af%ad&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -3478,8 +3605,8 @@
 &gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;用文字来说，就是斐波那契数列由0和1开始，之后的斐波那契数就是由之前的两数相加而得出。&lt;/p&gt;
-&lt;h3 id=&#34;递归解法1&#34;&gt;递归解法1：&lt;/h3&gt;
-&lt;p&gt;根据其数学定义，采用递归方式，直译成代码：&lt;/p&gt;
+&lt;h3 id=&#34;递归解法1&#34;&gt;递归解法1：
+&lt;/h3&gt;&lt;p&gt;根据其数学定义，采用递归方式，直译成代码：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -3495,8 +3622,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;此种方式简单明了，但运行起来会发现，随着n的增大，其耗时也随着增大变慢。其中原因在于会重复计算，如n=40时，第一次递归时计算f(39)和f(38)，第二次递归时计算f(38),f(37)以及f(37)和f(36)。为了加快效率，我们可以加入个临时存储空间，将计算过的结果存放与此。&lt;/p&gt;
-&lt;h3 id=&#34;递归临时存储&#34;&gt;递归临时存储：&lt;/h3&gt;
-&lt;p&gt;运用数组存放已计算过的结果，数组长度为n+1;&lt;/p&gt;
+&lt;h3 id=&#34;递归临时存储&#34;&gt;递归临时存储：
+&lt;/h3&gt;&lt;p&gt;运用数组存放已计算过的结果，数组长度为n+1;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -3517,8 +3644,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;动态规划解法&#34;&gt;动态规划解法：&lt;/h3&gt;
-&lt;p&gt;以上解法都是利用递归，从上往下进行，采用动态规划，由下往上进行计算。辅助数组&lt;code&gt;dptable&lt;/code&gt;用于存储计算过程中产生的结果。&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;动态规划解法&#34;&gt;动态规划解法：
+&lt;/h3&gt;&lt;p&gt;以上解法都是利用递归，从上往下进行，采用动态规划，由下往上进行计算。辅助数组&lt;code&gt;dptable&lt;/code&gt;用于存储计算过程中产生的结果。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -3543,8 +3670,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;动态规划解法-优化&#34;&gt;动态规划解法-优化：&lt;/h3&gt;
-&lt;p&gt;上面的都是通过创建n+1个元素数组，作为临时结果存储。空间复杂度为O(N),那还有没有可能优化一下。当然是可以的，我们可以找出规律，发现有用的都是前两个结果元素，可以只用两个变量存储即可，这样能将空间复杂度降为O(1)。&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;动态规划解法-优化&#34;&gt;动态规划解法-优化：
+&lt;/h3&gt;&lt;p&gt;上面的都是通过创建n+1个元素数组，作为临时结果存储。空间复杂度为O(N),那还有没有可能优化一下。当然是可以的，我们可以找出规律，发现有用的都是前两个结果元素，可以只用两个变量存储即可，这样能将空间复杂度降为O(1)。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -3585,8 +3712,8 @@
         <pubDate>Sun, 17 Sep 2023 18:07:30 +0800</pubDate>
         
         <guid>http://localhost:1313/p/build-blog/</guid>
-        <description>&lt;img src="http://localhost:1313/p/build-blog/cover.jpg" alt="Featured image of post Build Blog" /&gt;&lt;h3 id=&#34;下载安装hugo&#34;&gt;下载安装hugo&lt;/h3&gt;
-&lt;ul&gt;
+        <description>&lt;img src="http://localhost:1313/p/build-blog/cover.jpg" alt="Featured image of post Build Blog" /&gt;&lt;h3 id=&#34;下载安装hugo&#34;&gt;下载安装hugo
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;去github上下载对应系统的安装包：&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/releases/tag/v0.118.2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;hugo安装包&lt;/a&gt;。由于我是windows系统，那就下载windows版本。&lt;/li&gt;
 &lt;li&gt;下载完成后，解压将安装文件放至到某个目录。修改环境变量path,添加刚才hugo文件所在路径。&lt;/li&gt;
@@ -3602,9 +3729,9 @@
 	
 &gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;创建github仓库&#34;&gt;创建Github仓库&lt;/h3&gt;
-&lt;h4 id=&#34;创建博客源文件内容仓库&#34;&gt;创建博客源文件内容仓库：&lt;/h4&gt;
-&lt;p&gt;名字随意取
+&lt;h3 id=&#34;创建github仓库&#34;&gt;创建Github仓库
+&lt;/h3&gt;&lt;h4 id=&#34;创建博客源文件内容仓库&#34;&gt;创建博客源文件内容仓库：
+&lt;/h4&gt;&lt;p&gt;名字随意取
 &lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202309170955055.png&#34;
 	
 	
@@ -3615,8 +3742,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h4 id=&#34;创建github-pages仓库&#34;&gt;创建GitHub Pages仓库：&lt;/h4&gt;
-&lt;p&gt;仓库名称必须使用&lt;code&gt;&amp;lt;username.github.io&amp;gt;&lt;/code&gt;的格式，&lt;code&gt;username&lt;/code&gt;为GitHub的用户名:
+&lt;h4 id=&#34;创建github-pages仓库&#34;&gt;创建GitHub Pages仓库：
+&lt;/h4&gt;&lt;p&gt;仓库名称必须使用&lt;code&gt;&amp;lt;username.github.io&amp;gt;&lt;/code&gt;的格式，&lt;code&gt;username&lt;/code&gt;为GitHub的用户名:
 &lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202309171000912.png&#34;
 	
 	
@@ -3673,8 +3800,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;~~### 配置主题&lt;/p&gt;
 &lt;p&gt;将&lt;code&gt;themes\hugo-theme-stack\exampleSite&lt;/code&gt;里面的&lt;code&gt;content&lt;/code&gt;文件以及&lt;code&gt;config.yaml&lt;/code&gt;拷贝覆盖到根目录下&lt;/p&gt;
-&lt;h3 id=&#34;更简单的作法前面删除线的步骤皆可不用&#34;&gt;更简单的作法，前面删除线的步骤皆可不用！&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;更简单的作法前面删除线的步骤皆可不用&#34;&gt;更简单的作法，前面删除线的步骤皆可不用！
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;如果确定使用&lt;code&gt;stack&lt;/code&gt;主题，直接去GitHub下载&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack-starter&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;stack-starter&lt;/a&gt;工程。&lt;/li&gt;
 &lt;li&gt;修改&lt;code&gt;config\_default&lt;/code&gt;目录下的&lt;code&gt;config.toml&lt;/code&gt;文件，将&lt;code&gt;baseurl&lt;/code&gt;修改为：&lt;code&gt;https://&amp;lt;github-username&amp;gt;.github.io/&lt;/code&gt;&lt;/li&gt;
@@ -3710,8 +3837,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; git push origin main
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;查看效果&#34;&gt;查看效果：&lt;/h3&gt;
-&lt;p&gt;接着你就可以访问&lt;code&gt;https://&amp;lt;github-username&amp;gt;.github.io&lt;/code&gt;查看效果了：
+&lt;/div&gt;&lt;h3 id=&#34;查看效果&#34;&gt;查看效果：
+&lt;/h3&gt;&lt;p&gt;接着你就可以访问&lt;code&gt;https://&amp;lt;github-username&amp;gt;.github.io&lt;/code&gt;查看效果了：
 &lt;img src=&#34;https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202309171759286.png&#34;
 	
 	
@@ -3731,31 +3858,31 @@
         
         <guid>http://localhost:1313/p/markdown-syntax-guide/</guid>
         <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
-&lt;h2 id=&#34;headings&#34;&gt;Headings&lt;/h2&gt;
-&lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent six levels of section headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; is the lowest.&lt;/p&gt;
-&lt;h1 id=&#34;h1&#34;&gt;H1&lt;/h1&gt;
-&lt;h2 id=&#34;h2&#34;&gt;H2&lt;/h2&gt;
-&lt;h3 id=&#34;h3&#34;&gt;H3&lt;/h3&gt;
-&lt;h4 id=&#34;h4&#34;&gt;H4&lt;/h4&gt;
-&lt;h5 id=&#34;h5&#34;&gt;H5&lt;/h5&gt;
-&lt;h6 id=&#34;h6&#34;&gt;H6&lt;/h6&gt;
-&lt;h2 id=&#34;paragraph&#34;&gt;Paragraph&lt;/h2&gt;
-&lt;p&gt;Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.&lt;/p&gt;
+&lt;h2 id=&#34;headings&#34;&gt;Headings
+&lt;/h2&gt;&lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent six levels of section headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; is the lowest.&lt;/p&gt;
+&lt;h1 id=&#34;h1&#34;&gt;H1
+&lt;/h1&gt;&lt;h2 id=&#34;h2&#34;&gt;H2
+&lt;/h2&gt;&lt;h3 id=&#34;h3&#34;&gt;H3
+&lt;/h3&gt;&lt;h4 id=&#34;h4&#34;&gt;H4
+&lt;/h4&gt;&lt;h5 id=&#34;h5&#34;&gt;H5
+&lt;/h5&gt;&lt;h6 id=&#34;h6&#34;&gt;H6
+&lt;/h6&gt;&lt;h2 id=&#34;paragraph&#34;&gt;Paragraph
+&lt;/h2&gt;&lt;p&gt;Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.&lt;/p&gt;
 &lt;p&gt;Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.&lt;/p&gt;
-&lt;h2 id=&#34;blockquotes&#34;&gt;Blockquotes&lt;/h2&gt;
-&lt;p&gt;The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a &lt;code&gt;footer&lt;/code&gt; or &lt;code&gt;cite&lt;/code&gt; element, and optionally with in-line changes such as annotations and abbreviations.&lt;/p&gt;
-&lt;h3 id=&#34;blockquote-without-attribution&#34;&gt;Blockquote without attribution&lt;/h3&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;blockquotes&#34;&gt;Blockquotes
+&lt;/h2&gt;&lt;p&gt;The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a &lt;code&gt;footer&lt;/code&gt; or &lt;code&gt;cite&lt;/code&gt; element, and optionally with in-line changes such as annotations and abbreviations.&lt;/p&gt;
+&lt;h3 id=&#34;blockquote-without-attribution&#34;&gt;Blockquote without attribution
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;Tiam, ad mint andaepu dandae nostion secatur sequo quae.
 &lt;strong&gt;Note&lt;/strong&gt; that you can use &lt;em&gt;Markdown syntax&lt;/em&gt; within a blockquote.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;blockquote-with-attribution&#34;&gt;Blockquote with attribution&lt;/h3&gt;
-&lt;blockquote&gt;
+&lt;h3 id=&#34;blockquote-with-attribution&#34;&gt;Blockquote with attribution
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;Don&amp;rsquo;t communicate by sharing memory, share memory by communicating.&lt;br&gt;
 — &lt;cite&gt;Rob Pike&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/cite&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;tables&#34;&gt;Tables&lt;/h2&gt;
-&lt;p&gt;Tables aren&amp;rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.&lt;/p&gt;
+&lt;h2 id=&#34;tables&#34;&gt;Tables
+&lt;/h2&gt;&lt;p&gt;Tables aren&amp;rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -3774,8 +3901,8 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;inline-markdown-within-tables&#34;&gt;Inline Markdown within tables&lt;/h3&gt;
-&lt;table&gt;
+&lt;h3 id=&#34;inline-markdown-within-tables&#34;&gt;Inline Markdown within tables
+&lt;/h3&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Italics&lt;/th&gt;
@@ -3813,9 +3940,9 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;code-blocks&#34;&gt;Code Blocks&lt;/h2&gt;
-&lt;h3 id=&#34;code-block-with-backticks&#34;&gt;Code block with backticks&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h2 id=&#34;code-blocks&#34;&gt;Code Blocks
+&lt;/h2&gt;&lt;h3 id=&#34;code-block-with-backticks&#34;&gt;Code block with backticks
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -3841,8 +3968,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;code-block-indented-with-four-spaces&#34;&gt;Code block indented with four spaces&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
+&lt;/div&gt;&lt;h3 id=&#34;code-block-indented-with-four-spaces&#34;&gt;Code block indented with four spaces
+&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
 &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
 &amp;lt;head&amp;gt;
   &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
@@ -3853,8 +3980,8 @@
 &amp;lt;/body&amp;gt;
 &amp;lt;/html&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;diff-code-block&#34;&gt;Diff code block&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;diff-code-block&#34;&gt;Diff code block
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -3870,8 +3997,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+ features = [&amp;#34;jpeg&amp;#34;, &amp;#34;dynamic&amp;#34;]
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;one-line-code-block&#34;&gt;One line code block&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h3 id=&#34;one-line-code-block&#34;&gt;One line code block
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -3879,21 +4006,21 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;A paragraph&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;list-types&#34;&gt;List Types&lt;/h2&gt;
-&lt;h3 id=&#34;ordered-list&#34;&gt;Ordered List&lt;/h3&gt;
-&lt;ol&gt;
+&lt;/div&gt;&lt;h2 id=&#34;list-types&#34;&gt;List Types
+&lt;/h2&gt;&lt;h3 id=&#34;ordered-list&#34;&gt;Ordered List
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;First item&lt;/li&gt;
 &lt;li&gt;Second item&lt;/li&gt;
 &lt;li&gt;Third item&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;unordered-list&#34;&gt;Unordered List&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;unordered-list&#34;&gt;Unordered List
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;List item&lt;/li&gt;
 &lt;li&gt;Another item&lt;/li&gt;
 &lt;li&gt;And another item&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;nested-list&#34;&gt;Nested list&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;nested-list&#34;&gt;Nested list
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Fruit
 &lt;ul&gt;
 &lt;li&gt;Apple&lt;/li&gt;
@@ -3908,8 +4035,8 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;other-elements--abbr-sub-sup-kbd-mark&#34;&gt;Other Elements — abbr, sub, sup, kbd, mark&lt;/h2&gt;
-&lt;p&gt;&lt;abbr title=&#34;Graphics Interchange Format&#34;&gt;GIF&lt;/abbr&gt; is a bitmap image format.&lt;/p&gt;
+&lt;h2 id=&#34;other-elements--abbr-sub-sup-kbd-mark&#34;&gt;Other Elements — abbr, sub, sup, kbd, mark
+&lt;/h2&gt;&lt;p&gt;&lt;abbr title=&#34;Graphics Interchange Format&#34;&gt;GIF&lt;/abbr&gt; is a bitmap image format.&lt;/p&gt;
 &lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
 &lt;p&gt;X&lt;sup&gt;n&lt;/sup&gt; + Y&lt;sup&gt;n&lt;/sup&gt; = Z&lt;sup&gt;n&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Press &lt;kbd&gt;CTRL&lt;/kbd&gt; + &lt;kbd&gt;ALT&lt;/kbd&gt; + &lt;kbd&gt;Delete&lt;/kbd&gt; to end the session.&lt;/p&gt;
@@ -3934,8 +4061,8 @@
     &gt;PhotoSwipe&lt;/a&gt; and its syntax was inspired by &lt;a class=&#34;link&#34; href=&#34;https://typlog.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Typlog&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;To use this feature, the image must be in the same directory as the Markdown file, as it uses Hugo&amp;rsquo;s page bundle feature to read the dimensions of the image. &lt;strong&gt;External images are not supported.&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;syntax&#34;&gt;Syntax&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h2 id=&#34;syntax&#34;&gt;Syntax
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -3943,8 +4070,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;![&lt;span class=&#34;nt&#34;&gt;Image 1&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;1.jpg&lt;/span&gt;) ![&lt;span class=&#34;nt&#34;&gt;Image 2&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;2.jpg&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;result&#34;&gt;Result&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/image-gallery/1.jpg&#34;
+&lt;/div&gt;&lt;h2 id=&#34;result&#34;&gt;Result
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/image-gallery/1.jpg&#34;
 	width=&#34;2000&#34;
 	height=&#34;1400&#34;
 	srcset=&#34;http://localhost:1313/p/image-gallery/1_hudd2e8259c20ed0dcaa856c253552e90f_14625_480x0_resize_q75_box.jpg 480w, http://localhost:1313/p/image-gallery/1_hudd2e8259c20ed0dcaa856c253552e90f_14625_1024x0_resize_q75_box.jpg 1024w&#34;
@@ -3987,8 +4114,8 @@
         <guid>http://localhost:1313/p/shortcodes/</guid>
         <description>&lt;img src="http://localhost:1313/p/shortcodes/cover.jpg" alt="Featured image of post Shortcodes" /&gt;&lt;p&gt;For more details, check out the &lt;a class=&#34;link&#34; href=&#34;https://stack.jimmycai.com/writing/shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;bilibili-video&#34;&gt;Bilibili video&lt;/h2&gt;
-
+&lt;h2 id=&#34;bilibili-video&#34;&gt;Bilibili video
+&lt;/h2&gt;
 
 
 
@@ -4007,8 +4134,8 @@
     &lt;/iframe&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&#34;tencent-video&#34;&gt;Tencent video&lt;/h2&gt;
-
+&lt;h2 id=&#34;tencent-video&#34;&gt;Tencent video
+&lt;/h2&gt;
 &lt;div class=&#34;video-wrapper&#34;&gt;
     &lt;iframe src=&#34;https://v.qq.com/txp/iframe/player.html?vid=g0014r3khdw&amp;auto=0&#34; 
             scrolling=&#34;no&#34; 
@@ -4018,8 +4145,8 @@
     &gt;
     &lt;/iframe&gt;
 &lt;/div&gt;
-&lt;h2 id=&#34;youtube-video&#34;&gt;YouTube video&lt;/h2&gt;
-&lt;div class=&#34;video-wrapper&#34;&gt;
+&lt;h2 id=&#34;youtube-video&#34;&gt;YouTube video
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
     &lt;iframe loading=&#34;lazy&#34; 
             src=&#34;https://www.youtube.com/embed/0qwALOOvUik&#34; 
             allowfullscreen 
@@ -4028,8 +4155,8 @@
     &lt;/iframe&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&#34;generic-video-file&#34;&gt;Generic video file&lt;/h2&gt;
-&lt;div class=&#34;video-wrapper&#34;&gt;
+&lt;h2 id=&#34;generic-video-file&#34;&gt;Generic video file
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
     &lt;video
     controls
     src=&#34;https://www.w3schools.com/tags/movie.mp4&#34;
@@ -4043,16 +4170,16 @@
     &lt;/video&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&#34;gist&#34;&gt;Gist&lt;/h2&gt;
-&lt;script src=&#34;https://gist.github.com/CaiJimmy/e2751a943de10b2a5b3a8a6c2120cb86.js&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;gist&#34;&gt;Gist
+&lt;/h2&gt;&lt;script src=&#34;https://gist.github.com/CaiJimmy/e2751a943de10b2a5b3a8a6c2120cb86.js&#34;&gt;&lt;/script&gt;
 
-&lt;h2 id=&#34;gitlab&#34;&gt;GitLab&lt;/h2&gt;
-&lt;script
+&lt;h2 id=&#34;gitlab&#34;&gt;GitLab
+&lt;/h2&gt;&lt;script
     type=&#34;application/javascript&#34;
     src=&#34;https://gitlab.com/-/snippets/2589724.js&#34;
 &gt;&lt;/script&gt;
-&lt;h2 id=&#34;quote&#34;&gt;Quote&lt;/h2&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&#34;quote&#34;&gt;Quote
+&lt;/h2&gt;&lt;blockquote&gt;
     &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;span class=&#34;cite&#34;&gt;&lt;span&gt;― &lt;/span&gt;&lt;span&gt;A famous person, &lt;/span&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Book&#34;&gt;&lt;cite&gt;The book they wrote&lt;/cite&gt;&lt;/a&gt;&lt;/span&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
@@ -4071,8 +4198,8 @@
         <description>&lt;p&gt;Stack has built-in support for math typesetting using &lt;a class=&#34;link&#34; href=&#34;https://katex.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;KaTeX&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;It&amp;rsquo;s not enabled by default side-wide,&lt;/strong&gt; but you can enable it for individual posts by adding &lt;code&gt;math: true&lt;/code&gt; to the front matter. Or you can enable it side-wide by adding &lt;code&gt;math = true&lt;/code&gt; to the &lt;code&gt;params.article&lt;/code&gt; section in &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;inline-math&#34;&gt;Inline math&lt;/h2&gt;
-&lt;p&gt;This is an inline mathematical expression: $\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$&lt;/p&gt;
+&lt;h2 id=&#34;inline-math&#34;&gt;Inline math
+&lt;/h2&gt;&lt;p&gt;This is an inline mathematical expression: $\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -4081,8 +4208,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;block-math&#34;&gt;Block math&lt;/h2&gt;
-&lt;p&gt;$$
+&lt;/div&gt;&lt;h2 id=&#34;block-math&#34;&gt;Block math
+&lt;/h2&gt;&lt;p&gt;$$
 \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
 $$&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='http://localhost:1313/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB-%E6%B0%B4%E5%B9%B3%E5%88%86%E7%89%87/'>
 
-<link rel="stylesheet" href="/scss/style.min.c6b767b9eb9f309b3f7894cc7606640615b31b2f961a807fafa564a6c97ece24.css"><meta property='og:title' content="Sharding Jdbc实现读写分离+水平分片">
+<link rel="stylesheet" href="/scss/style.min.d2f78c050d4403894c816f76b3019538f3efed9edad5eb96bf29b6b27b04d65b.css"><meta property='og:title' content="Sharding Jdbc实现读写分离+水平分片">
 <meta property='og:description' content="日常系统开发中，经常涉及到大数据量的业务，常见的如商城系统，规模上去后，单表会经常上千万甚至上亿。仅仅靠单表肯定是无法支撑系统的规模及性能，">
 <meta property='og:url' content='http://localhost:1313/p/sharding-jdbc%E5%AE%9E%E7%8E%B0%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB-%E6%B0%B4%E5%B9%B3%E5%88%86%E7%89%87/'>
 <meta property='og:site_name' content='码文'>
@@ -86,7 +86,7 @@ if (!doNotTrack) {
             <h1 class="site-name"><a href="/">码文</a></h1>
             <h2 class="site-description">学海本无涯，惟勤是岸</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -361,8 +361,8 @@ if (!doNotTrack) {
     
     
     <p>日常系统开发中，经常涉及到大数据量的业务，常见的如商城系统，规模上去后，单表会经常上千万甚至上亿。仅仅靠单表肯定是无法支撑系统的规模及性能，因此诞生了分库分表的解决方案。首先，为了保证高可用，会增加主从库备份；再者为了高性能，会利用主从库进行读写分离；为了高容量，会进行分库分表。</p>
-<h3 id="整体架构图">整体架构图：</h3>
-<p><img src="https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202401092147218.png"
+<h3 id="整体架构图">整体架构图：
+</h3><p><img src="https://wechapter.oss-cn-hangzhou.aliyuncs.com/wechat/image202401092147218.png"
 	
 	
 	
@@ -373,10 +373,10 @@ if (!doNotTrack) {
 	
 ></p>
 <p><code>master0</code>和<code>master1</code>同为写库，用于数据分片，增加数据容量。<code>slave0</code>和<code>slave1</code>为从库，提供查询能力，分担查询压力，提升系统性能。同时作为备份库提高可靠性。</p>
-<h3 id="mysql高可用集群搭建">mysql高可用集群搭建</h3>
-<h4 id="主mysql搭建">主mysql搭建</h4>
-<h5 id="1docker创建主mysql服务">1.docker创建主mysql服务</h5>
-<div class="highlight"><div class="chroma">
+<h3 id="mysql高可用集群搭建">mysql高可用集群搭建
+</h3><h4 id="主mysql搭建">主mysql搭建
+</h4><h5 id="1docker创建主mysql服务">1.docker创建主mysql服务
+</h5><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -396,8 +396,8 @@ if (!doNotTrack) {
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>mysql:8.0.29
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h5 id="2修改主mysql配置文件">2.修改主mysql配置文件</h5>
-<div class="highlight"><div class="chroma">
+</div><h5 id="2修改主mysql配置文件">2.修改主mysql配置文件
+</h5><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -457,8 +457,8 @@ if (!doNotTrack) {
 <p>binlog_format=MIXED：是以上两种level的混合使用，有函数用ROW，没函数用STATEMENT，但是无法识别系统变量</p>
 </li>
 </ul>
-<h5 id="3进入mysql主服务器修改登录限制">3.进入mysql主服务器，修改登录限制</h5>
-<div class="highlight"><div class="chroma">
+<h5 id="3进入mysql主服务器修改登录限制">3.进入mysql主服务器，修改登录限制
+</h5><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -476,8 +476,8 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl">ALTER USER <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;%&#39;</span> IDENTIFIED WITH mysql_native_password BY <span class="s1">&#39;root&#39;</span><span class="p">;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h5 id="4-创建数据复制所用的slave用户">4. 创建数据复制所用的slave用户</h5>
-<div class="highlight"><div class="chroma">
+</div><h5 id="4-创建数据复制所用的slave用户">4. 创建数据复制所用的slave用户
+</h5><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -497,8 +497,8 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl">FLUSH PRIVILEGES<span class="p">;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h5 id="5-查看主mysql状态">5. 查看主mysql状态</h5>
-<div class="highlight"><div class="chroma">
+</div><h5 id="5-查看主mysql状态">5. 查看主mysql状态
+</h5><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -516,9 +516,9 @@ if (!doNotTrack) {
 	
 	
 ></p>
-<h4 id="从服务器搭建">从服务器搭建</h4>
-<h5 id="1docker创建启动从服务器">1.docker创建启动从服务器</h5>
-<div class="highlight"><div class="chroma">
+<h4 id="从服务器搭建">从服务器搭建
+</h4><h5 id="1docker创建启动从服务器">1.docker创建启动从服务器
+</h5><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -538,8 +538,8 @@ if (!doNotTrack) {
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>mysql:8.0.29
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h5 id="2-修改从服务器配置">2. 修改从服务器配置</h5>
-<div class="highlight"><div class="chroma">
+</div><h5 id="2-修改从服务器配置">2. 修改从服务器配置
+</h5><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -573,8 +573,8 @@ if (!doNotTrack) {
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker restart mysql-slave1
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h5 id="3-修改登录方式">3. 修改登录方式</h5>
-<div class="highlight"><div class="chroma">
+</div><h5 id="3-修改登录方式">3. 修改登录方式
+</h5><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -592,8 +592,8 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl">ALTER USER <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;%&#39;</span> IDENTIFIED WITH mysql_native_password BY <span class="s1">&#39;root&#39;</span><span class="p">;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h5 id="4-配置主从关系">4. 配置主从关系</h5>
-<div class="highlight"><div class="chroma">
+</div><h5 id="4-配置主从关系">4. 配置主从关系
+</h5><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -605,8 +605,8 @@ if (!doNotTrack) {
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">MASTER_LOG_FILE</span><span class="o">=</span><span class="s1">&#39;binlog.000003&#39;</span><span class="p">,</span><span class="n">MASTER_LOG_POS</span><span class="o">=</span><span class="mi">1333</span><span class="p">;</span><span class="w"> 
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="slave启动主从同步">slave启动主从同步</h4>
-<div class="highlight"><div class="chroma">
+</div><h4 id="slave启动主从同步">slave启动主从同步
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -618,8 +618,8 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl">SHOW SLAVE STATUS<span class="se">\G</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="springboot配置">SpringBoot配置</h3>
-<p>pom.xml加入<code>sharding-jdbc</code>,<code>mybatis-plus</code>,<code>mysql驱动</code>等依赖</p>
+</div><h3 id="springboot配置">SpringBoot配置
+</h3><p>pom.xml加入<code>sharding-jdbc</code>,<code>mybatis-plus</code>,<code>mysql驱动</code>等依赖</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1240,7 +1240,7 @@ if (!doNotTrack) {
     
     <section class="powerby">
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.24.2">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -1329,7 +1329,7 @@ if (!doNotTrack) {
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.78371826a48fdc7fba5f4a1ce667a6a4144109771e7ffa600f1638f68911ec79.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
