@@ -3,16 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-03-31T20:00:24+08:00</lastmod>
+    <lastmod>2026-01-02T16:13:11+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ai/</loc>
+    <lastmod>2026-01-02T16:13:11+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/ai/</loc>
+    <lastmod>2026-01-02T16:13:11+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-01-02T16:13:11+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2026-01-02T16:13:11+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-01-02T16:13:11+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/yolo/</loc>
+    <lastmod>2026-01-02T16:13:11+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/p/yolo%E7%81%AB%E6%83%85%E8%AF%86%E5%88%AB/</loc>
+    <lastmod>2026-01-02T16:13:11+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/p/mysql8%E8%A7%A3%E5%8E%8B%E5%8C%85%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2025-03-31T20:00:24+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2025-03-31T20:00:24+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2024-12-29T11:24:38+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/java/</loc>
     <lastmod>2024-12-29T11:24:38+08:00</lastmod>
@@ -24,9 +39,6 @@
     <lastmod>2024-12-29T11:24:38+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/sqlite/</loc>
-    <lastmod>2024-12-29T11:24:38+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-12-29T11:24:38+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/java/</loc>
@@ -67,12 +79,6 @@
   </url><url>
     <loc>http://localhost:1313/p/leetcode-105-%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
     <lastmod>2024-03-11T21:25:08+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
-    <lastmod>2024-02-22T15:44:27+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/ai/</loc>
-    <lastmod>2024-02-22T15:44:27+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/whisper/</loc>
     <lastmod>2024-02-22T15:44:27+08:00</lastmod>
